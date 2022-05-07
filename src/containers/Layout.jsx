@@ -1,12 +1,15 @@
 import React from 'react'
-
+import Navbar from '@/components/Navbar'
 import '@/styles/LayoutApp.scss'
 
 const LayoutApp = ({ children }) => {
   return (
-    <div className='main-app'>
-      { children }
-    </div>
+    <>
+      <Navbar />
+      <div className='main-app'>
+        { children }
+      </div>
+    </>
   )
 }
 
