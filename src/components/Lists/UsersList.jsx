@@ -37,12 +37,12 @@ const UsersList = ({ users, loading, total }) => {
   }
 
   return (
-    <div>
+    <div className='grid-user'>
       { loadinData() }
       { emptyData() }
       { (() => {
         const res = []
-        for (let index = 0; index <= items; index++) {
+        for (let index = 0; index < items; index++) {
           res.push(<UserCard key={index} user={users[index]} />)
         }
         return res

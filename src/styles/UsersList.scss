@@ -12,3 +12,11 @@
     text-align: center;
   }
 }
+
+.grid-user{
+  margin-top: 2rem;
+  display: grid;
+  grid-gap: 20px;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
