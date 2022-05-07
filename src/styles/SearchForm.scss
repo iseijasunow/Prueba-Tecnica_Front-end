@@ -2,6 +2,7 @@
 
 .search-form-container{
   display: flex;
+  flex-direction: column;
   .form-section{
     width: 100%;
     display: flex;

@@ -21,6 +21,7 @@ module.exports = {
     'react/prop-types': 'off',
     'no-return-assign': 'off',
     'multiline-ternary': 'off',
-    'no-unneeded-ternary': 'off'
+    'no-unneeded-ternary': 'off',
+    'no-unreachable-loop': 'off'
   }
 }
