@@ -1,8 +1,10 @@
 import React from 'react'
-
+import SearchForm from '@/components/Forms/SearchForm.jsx'
 const App = () => {
   return (
-    <h1>app to test</h1>
+    <>
+      <SearchForm />
+    </>
   )
 }
 
