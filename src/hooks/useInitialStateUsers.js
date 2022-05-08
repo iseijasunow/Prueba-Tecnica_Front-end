@@ -14,14 +14,13 @@ const useInitialStateUsers = () => {
 
   const getUsers = async (user = 'YOUR_NAME') => {
     try {
-      const response = await API.get(`/users?q=${user}`)
+      const response = await API.get(`/search/users?q=${user}`)
       setState({
         ...state,
         ...response.data,
         error: 'error',
         loading: false
       })
-      return 'error'
     } catch (error) {
       return 'error'
     }

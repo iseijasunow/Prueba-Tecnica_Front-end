@@ -8,14 +8,20 @@ $colors: (
 
 @each $name, $color in $colors {
   .btn-#{$name}{
-    color: $white;
-    background-color: $color;
-    border-color: $color;
+    color: $white !important;
+    background-color: $color !important;
+    border-color: $color !important;
+  }
+
+  .btn-outline-#{$name}{
+    color: $color !important;
+    background-color: transparent !important;
+    border-color: $color !important;
   }
 }
 
 
-button{
+button, .btn{
   display: inline-block;
   font-weight: 400;
   line-height: 1.5;

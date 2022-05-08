@@ -5,6 +5,7 @@ import Layout from '@/containers/Layout.jsx'
 
 import Home from '@/views/Home'
 import Search from '@/views/Search'
+import DetailUser from '@/views/DetailUser'
 import NotFound from '@/views/Errors/NotFound.jsx'
 
 import AppContext from '@/context/AppContext'
@@ -24,6 +25,7 @@ const App = () => {
             <Routes>
               <Route exact path="/" element={<Home />} />
               <Route exact path="/user" element={<Search />} />
+              <Route exact path="/user/:userName/detail" element={<DetailUser />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Layout>
