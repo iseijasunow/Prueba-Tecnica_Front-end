@@ -1,7 +1,14 @@
-import React from 'react'
+import React, { useEffect, useContext } from 'react'
+
 import {
-  useLocation
+  useLocation,
+  useNavigate
 } from 'react-router-dom'
+
+import ErrorContext from '@/context/ErrorContext'
+
+import SearchForm from '@/components/Forms/SearchForm.jsx'
+import AppContext from '@/context/AppContext'
 
 const useQuery = () => {
   const { search } = useLocation()
@@ -10,9 +17,34 @@ const useQuery = () => {
 
 const SearchPage = () => {
   const query = useQuery()
-  console.log(query)
+  const navigate = useNavigate()
+  const { getUsers, state } = useContext(AppContext)
+  const { openAlert } = useContext(ErrorContext)
+
+  useEffect(() => {
+    const name = query.get('name')
+    console.log(name)
+    getData(name)
+  }, [])
+
+  const getData = async (name) => {
+    const response = await getUsers(name)
+    openAlert(response, { message: 'An error occurred while bringing in the users, try again later', variant: 'danger' })
+  }
+
+  const submitForm = data => {
+    console.log(data)
+    getData(data)
+    navigate(`/users?name=${data}`)
+  }
+
   return (
-    <h1>search : {query.get('name')}</h1>
+    <>
+      <SearchForm
+        search={state}
+        onSubmit={submitForm}
+      />
+    </>
   )
 }
 

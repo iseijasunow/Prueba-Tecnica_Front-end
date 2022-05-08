@@ -20,7 +20,6 @@ const App = () => {
   }
 
   const submitForm = data => {
-    console.log(data)
     navigate(`/users?name=${data}`)
   }
 

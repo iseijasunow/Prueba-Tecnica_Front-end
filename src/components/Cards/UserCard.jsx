@@ -12,10 +12,10 @@ const UserCard = ({ user }) => {
 
   return (
     <div className='card user-card' onClick={() => handleClickCard()}>
-      <img src={user.avatar_url} alt="user-avatar" />
+      <img src={user?.avatar_url} alt="user-avatar" />
       <div className='body-card'>
-        <h3>{user.login}</h3>
-        <h5>identifier: #{user.id}</h5>
+        <h3>{user?.login}</h3>
+        <h5>identifier: #{user?.id}</h5>
       </div>
     </div>
   )

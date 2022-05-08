@@ -5,11 +5,11 @@ import { useForm } from 'react-hook-form'
 import UsersList from '@/components/Lists/UsersList.jsx'
 import '@/styles/SearchForm.scss'
 
-const SearchForm = ({ search }) => {
+const SearchForm = ({ search, onSubmit }) => {
   const { register, handleSubmit, formState: { errors } } = useForm()
 
   const submit = data => {
-    console.log(data)
+    onSubmit(data.userName)
   }
 
   return (
