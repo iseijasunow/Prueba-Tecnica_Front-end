@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 import SearchForm from '@/components/Forms/SearchForm.jsx'
 import API from '@/utils/axios'
@@ -13,6 +14,7 @@ const INITIAL_STATE = {
 
 const App = () => {
   const [state, setState] = useState(INITIAL_STATE)
+  const navigate = useNavigate()
 
   useEffect(() => {
     getUsers()
@@ -38,11 +40,17 @@ const App = () => {
     })
   }
 
+  const submitForm = data => {
+    console.log(data)
+    navigate(`/users?name=${data}`)
+  }
+
   return (
     <>
       <SearchForm
         search={state}
         onChangeInput={onChangeInput}
+        onSubmit={submitForm}
       />
     </>
   )
