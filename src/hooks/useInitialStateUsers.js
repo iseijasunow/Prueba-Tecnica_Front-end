@@ -5,7 +5,8 @@ const INITIAL_STATE = {
   incomplete_results: false,
   items: [],
   total_count: 0,
-  loading: true
+  loading: true,
+  error: ''
 }
 
 const useInitialStateUsers = () => {
@@ -16,11 +17,13 @@ const useInitialStateUsers = () => {
       const response = await API.get(`/users?q=${user}`)
       setState({
         ...state,
-        loading: false,
-        ...response.data
+        ...response.data,
+        error: 'error',
+        loading: false
       })
+      return 'error'
     } catch (error) {
-      console.log(error)
+      return 'error'
     }
   }
 

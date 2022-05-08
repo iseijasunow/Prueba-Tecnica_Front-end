@@ -1,16 +1,23 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
+import ErrorContext from '@/context/ErrorContext'
 
 import SearchForm from '@/components/Forms/SearchForm.jsx'
-import useInitialStateUsers from '@/hooks/useInitialStateUsers'
+import AppContext from '@/context/AppContext'
 
 const App = () => {
   const navigate = useNavigate()
-  const { getUsers, state } = useInitialStateUsers()
+  const { getUsers, state } = useContext(AppContext)
+  const { openAlert } = useContext(ErrorContext)
 
   useEffect(() => {
-    getUsers()
+    getData()
   }, [])
+
+  const getData = async () => {
+    const response = await getUsers()
+    openAlert(response, { message: 'An error occurred while bringing in the users, try again later', variant: 'danger' })
+  }
 
   const submitForm = data => {
     console.log(data)
