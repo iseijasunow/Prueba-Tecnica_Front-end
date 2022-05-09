@@ -5,20 +5,33 @@ const INITIAL_STATE = {
   incomplete_results: false,
   items: [],
   total_count: 0,
-  loading: true,
-  error: ''
+  loading: true
 }
 
 const useInitialStateUsers = () => {
   const [state, setState] = useState(INITIAL_STATE)
 
+  const initializeState = () => {
+    setState(INITIAL_STATE)
+  }
+
   const getUsers = async (user = 'YOUR_NAME') => {
     try {
+      const arrItems = []
       const response = await API.get(`/search/users?q=${user}`)
+      if (response.data.total_count > 10) {
+        for (let index = 0; index < 10; index++) {
+          arrItems.push(response.data.items[index])
+        }
+      } else {
+        response.data.items.forEach(element => {
+          arrItems.push(element)
+        })
+      }
       setState({
-        ...state,
-        ...response.data,
-        error: 'error',
+        incomplete_results: response.data.incomplete_results,
+        items: arrItems,
+        total_count: response.data.total_count,
         loading: false
       })
     } catch (error) {
@@ -28,7 +41,8 @@ const useInitialStateUsers = () => {
 
   return {
     state,
-    getUsers
+    getUsers,
+    initializeState
   }
 }
 

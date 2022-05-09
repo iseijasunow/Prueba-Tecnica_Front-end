@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import UserCard from '@/components/Cards/UserCard.jsx'
 import Spinner from '@/components/Spinners'
 import { ImFilesEmpty } from 'react-icons/im'
 import '@/styles/UsersList.scss'
 
 const UsersList = ({ users, loading, total }) => {
-  const [items, setItems] = useState(0)
+  // const [items, setItems] = useState(0)
 
-  useEffect(() => {
-    if (users.length > 0) {
-      const value = total >= 10 ? 9 : total
-      setItems(value)
-    }
-  }, [users.length])
+  // useEffect(() => {
+  //   if (users.length > 0) {
+  //     const value = total >= 10 ? 9 : total
+  //     setItems(value)
+  //   }
+  // }, [users.length])
 
   const loadinData = () => {
     if (loading) {
@@ -40,13 +40,18 @@ const UsersList = ({ users, loading, total }) => {
     <div className='grid-user'>
       { loadinData() }
       { emptyData() }
-      { (() => {
+      {/* { (() => {
         const res = []
         for (let index = 0; index < items; index++) {
           res.push(<UserCard key={index} user={users[index]} />)
         }
         return res
-      })()}
+      })()} */}
+      {
+        users.map((user, index) => (
+          <UserCard key={index} user={user} />
+        ))
+      }
     </div>
   )
 }

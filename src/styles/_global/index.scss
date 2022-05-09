@@ -4,3 +4,26 @@
 @import './alert.scss';
 @import './loader.scss';
 @import './card.scss';
+
+.page-chart{
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  .page-chart{
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .page-chart{
+    width: 40%;
+  }
+}
+
+@media only screen and (min-width: 920px) {
+  .page-chart{
+    width: 30%;
+  }
+}
