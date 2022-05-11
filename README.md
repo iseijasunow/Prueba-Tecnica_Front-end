@@ -8,6 +8,8 @@
 - Al momento de estilizar el código, se usó 'SASS'.
 - Decidí utilizar 'Flex' y 'Grid' para el manejo de las columnas.
 
+Lo único que no pude pude utilizar, fue la librería de gráficos 'Chart.js'.
+
 --------------------------------------------------------
 
 # Prueba Técnica - Programador (Front-end)
