@@ -29,7 +29,7 @@ function App() {
         setShowErrorModal(true)
         console.log(error)
       }
-    }else{
+    } else {
       setShowErrorModal(true)
     }
   }
@@ -82,7 +82,7 @@ function App() {
           : null}
 
         {showErrorModal ?
-          <NotificationModal message="Something went Wrong. You should use less than 4 characters or use a prohibited word, try again." action={() => setShowErrorModal(false)}/>
+          <NotificationModal message="Something went Wrong. You should use less than 4 characters or use a prohibited word, try again." action={() => setShowErrorModal(false)} />
           : null}
 
       </footer>

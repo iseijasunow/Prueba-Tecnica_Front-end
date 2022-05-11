@@ -9,13 +9,13 @@ import User from './components/User';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
-    <BrowserRouter>
+  <BrowserRouter>
     <Routes>
       <Route path='/' element={<App />} />
-      <Route path='/:user' element={<User />}/>
+      <Route path='/:user' element={<User />} />
     </Routes>
-    
-    </BrowserRouter>
+
+  </BrowserRouter>
 
 );
 

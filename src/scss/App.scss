@@ -109,6 +109,8 @@ body{
     }
 }
 
+// footer
+
 footer{
     display: flex;
     flex-direction: column;
@@ -153,6 +155,7 @@ footer{
     }
 }
 
+//modales
 .modal{
     position: absolute;
     justify-content: center;
@@ -189,7 +192,7 @@ footer{
 
 }
 
-
+//media Queries
 @media(max-width: 1024px) {
     .search{
         display: flex;
@@ -233,10 +236,6 @@ footer{
             }
         }
     }
-}
-
-.graphic{
-    width: 60%;
 }
 
 @media(max-width: 550px) {
