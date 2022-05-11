@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&display=swap');
+
+$primary: #d60071;
+$secondary: #2c9fcc;
+$info: #45ff88;
+$complementary: #ff3a96;
+
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+//header
+
+.title-container{
+    display: flex;
+    text-align: center;
+    margin-top: 5%;
+    .app-title{
+        font-size: 6rem;
+        margin: 0 auto;
+        font-family: 'Berkshire Swash', cursive;
+        color: $primary;
+        
+    }
+}
+
+//search
+
+.search{
+    display: flex;
+    margin: 8%;
+    margin-bottom: 0;
+    align-items: center;
+    .search-bar{
+        width: 100%;
+        margin: 0 auto;
+        border: 1px solid $info;
+        border-radius: 100px;
+        align-items: center;
+
+        input{
+            width: 90%;
+            line-height: 4rem;
+            border: none;
+            border-radius: 100px;
+            font-size: 2.3rem;
+            padding: 0 12px;
+        }
+        input:focus{
+            outline: none;
+        }
+        button{
+            height: 4.2rem;
+            width: 4.2rem;
+            border-radius: 100px;
+            border: none;
+            float: right;
+            background-color: transparent;
+        }
+    }
+}
+.search-description{
+    margin-top: 2%;
+    margin-bottom: 4%;
+    p{
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+
+
+// user-cards
+.users-list{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 4% auto;
+    .user-info{
+        margin: 0 auto;
+        display: flex;
+        width: 40%;
+        border: 1px solid $primary;
+        border-radius: 100px;
+        margin-top: 1.2%;
+        box-shadow: inset 5em 0.35em $complementary;
+        background-color: #dadada;
+    }
+}
+.user-row{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding: 0 2%;
+    .avatar{
+        width: 8%;
+        border: 2px solid $info;
+        border-radius: 100px;
+        margin: 2% 4%;
+    }
+    .login{
+        text-align: center;
+    }
+
+    .display-details{
+        text-decoration: none;
+        color: $secondary
+    }
+}
+
+// footer
+
+footer{
+    display: flex;
+    flex-direction: column;
+    .followers{
+        background-color: transparent;
+        color: $primary;
+        border: 2px solid $complementary;
+        border-radius: 100px;
+        padding: 1.5% 4%;
+        width: 40%;
+        margin: 0 auto;
+        margin-bottom: 5%;
+        font-size: 1.2rem;
+    }
+    .followers:hover{
+        background-color: $complementary;
+        color: #fff;
+    }
+}
+
+// user-page
+
+.user-card{
+    h1{
+        text-align: center;
+        font-size: 4rem;
+        font-family: 'Berkshire Swash', cursive;
+        color: $primary;
+    }
+    .user-image{
+        display: flex;
+        img{
+            margin: 0 auto;
+            width: 25%;
+            border: 3px solid $secondary;
+            border-radius: 100%;
+        }
+    }
+    
+    p{
+        text-align: center;
+    }
+}
+
+//modales
+.modal{
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: auto;
+    inset: 0;
+    z-index: 50;
+    outline: none;
+    background-color: #00000067;
+
+
+    .modal-container{
+        position: relative;
+        width: auto;
+        background-color: #aa2823;
+        color: #fff;
+        padding: 5%;
+        align-items: center;
+
+        .modal-footer{
+            display: flex;
+            justify-content: center;
+
+            button{
+                font-size: 1.1rem;
+                color:#fff;
+                background-color: transparent;
+                border: none;
+            }
+        }
+    }
+
+}
+
+//media Queries
+@media(max-width: 1024px) {
+    .search{
+        display: flex;
+        flex-direction: column;
+        margin: 8%;
+        margin-bottom: 0;
+        align-items: center;
+        .search-bar{
+            width: 60%;
+            margin: 0 auto;
+            border: none;
+            border-radius: 100px;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+    
+            input{
+                line-height: 2.1rem;
+                border: 3px solid $complementary;
+                border-radius: 100px;
+                font-size: 1.5rem;
+                padding: 0 12px;
+            }
+            input:focus{
+                outline: none;
+            }
+            button{
+                height: 2.2rem;
+                width: 80%;
+                border-radius: 100px;
+                margin: 0 auto;
+                border: none;
+                float: center;
+                margin: 2% auto;
+                border: 1.5px solid $info;
+                background-color: transparent;
+            }
+
+            button:hover{
+                background-color: $info;
+            }
+        }
+    }
+}
+
+@media(max-width: 550px) {
+    .users-list{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 4% auto;
+        .user-info{
+            margin: 0 auto;
+            display: flex;
+            width: 96%;
+            border: 1px solid $primary;
+            border-radius: 100px;
+            margin-top: 1.2%;
+            box-shadow: inset 5em 0.35em $complementary;
+            background-color: #dadada;
+        }
+    }
+    .user-row{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        padding: 0 2%;
+        .avatar{
+            width: 8%;
+            border: 2px solid $info;
+            border-radius: 100px;
+            margin: 2% 4%;
+        }
+        .login{
+            text-align: center;
+        }
+    
+        .display-details{
+            text-decoration: none;
+            color: $secondary
+        }
+    }
+}
+
+@media(min-width: 551px) and (max-width: 980px) {
+    .users-list{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 4% auto;
+        .user-info{
+            margin: 0 auto;
+            display: flex;
+            width: 70%;
+            border: 1px solid $primary;
+            border-radius: 100px;
+            margin-top: 1.2%;
+            box-shadow: inset 5em 0.35em $complementary;
+            background-color: #dadada;
+        }
+    }
+    .user-row{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        padding: 0 2%;
+        .avatar{
+            width: 8%;
+            border: 2px solid $info;
+            border-radius: 100px;
+            margin: 2% 4%;
+        }
+        .login{
+            text-align: center;
+        }
+    
+        .display-details{
+            text-decoration: none;
+            color: $secondary
+        }
+    }
+}
