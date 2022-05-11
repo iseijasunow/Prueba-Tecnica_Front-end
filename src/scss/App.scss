@@ -15,6 +15,7 @@ body{
 .title-container{
     display: flex;
     text-align: center;
+    margin-top: 5%;
     .app-title{
         font-size: 6rem;
         margin: 0 auto;
@@ -108,6 +109,26 @@ body{
     }
 }
 
+footer{
+    display: flex;
+    flex-direction: column;
+    .followers{
+        background-color: transparent;
+        color: $primary;
+        border: 2px solid $complementary;
+        border-radius: 100px;
+        padding: 1.5% 4%;
+        width: 40%;
+        margin: 0 auto;
+        margin-bottom: 5%;
+        font-size: 1.2rem;
+    }
+    .followers:hover{
+        background-color: $complementary;
+        color: #fff;
+    }
+}
+
 // user-page
 
 .user-card{
@@ -131,6 +152,43 @@ body{
         text-align: center;
     }
 }
+
+.modal{
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: auto;
+    inset: 0;
+    z-index: 50;
+    outline: none;
+    background-color: #00000067;
+
+
+    .modal-container{
+        position: relative;
+        width: auto;
+        background-color: #aa2823;
+        color: #fff;
+        padding: 5%;
+        align-items: center;
+
+        .modal-footer{
+            display: flex;
+            justify-content: center;
+
+            button{
+                font-size: 1.1rem;
+                color:#fff;
+                background-color: transparent;
+                border: none;
+            }
+        }
+    }
+
+}
+
 
 @media(max-width: 1024px) {
     .search{
@@ -175,6 +233,10 @@ body{
             }
         }
     }
+}
+
+.graphic{
+    width: 60%;
 }
 
 @media(max-width: 550px) {

@@ -1,18 +1,16 @@
-import { Link, useLocation } from "react-router-dom"
+import { Link} from "react-router-dom"
 
 
 
 export default function NotificationModal(props) {
-    const location = useLocation()
     return (
         <>
-            <div
-                className="">
-                <div className="">
-                    <h3 className="">{props.message}</h3>
-                    <div className="">
+            <div className="modal">
+                <div className="modal-container">
+                    <h3 className="center bold text-center text-xl">{props.message}</h3>
+                    <div className="modal-footer flex items-center justify-center p-4">
                         <Link to="/">
-                            <button className="" onClick={props.action}>Close</button>
+                            <button className="justify-center text-white text-l bg-transparent font-bold uppercase text-sm outline-none focus:outline-none ease-linear transition-all duration-150" onClick={props.action}>Close</button>
                         </Link>
 
                     </div>

@@ -25,7 +25,7 @@ ChartJS.register(
 
 const options = {
   fill: true,
-  responsive: true,
+  Responsive: true,
   scales: {
     y: {
       min: 0,
@@ -40,24 +40,59 @@ const options = {
 
 export default function Graphic(props) {
 
-  const data = useMemo(function () {
-    return {
+  let results = props.users
+  const [usersIndex, setUsersIndex] = useState([])
+  const [followers, setFollowers] = useState([])
+  const [showChart, setShowChart] = useState(false)
+  const [data, setData] = useState({})
+  const followersList = []
+  const userList = []
+  let follows = []
+  let userArr = []
+  useEffect(() => {
+    results.forEach(user => {
+      fetch(user.url)
+        .then(res => res.json())
+        .then(res => {
+          follows = res.followers
+          userArr = res.login
+          followersList.push(follows)
+          userList.push(userArr)
+        })
+    });
+
+    const config = {
       datasets: [
         {
           label: "FOLLOWERS",
-          data: props.followers,
+          data: followers,
           tension: 0.3,
-          borderColor: "rgb(75, 192, 192)",
+          borderColor: "#d60071",
           pointRadius: 6,
-          pointBackgroundColor: "rgb(75, 192, 192)",
-          backgroundColor: "rgba(75, 192, 192, 0.3)",
+          pointBackgroundColor: "#d60071",
+          backgroundColor: "#d600724d",
         },
       ],
-      labels: props.login,
-    };
-  }, []);
+      labels: usersIndex,
+    }
+    setData(config)
+
+    setUsersIndex(userList)
+    setFollowers(followersList)
+    setShowChart(true)
+
+  }, [results])
+
 
   return (
-      <Line data={data} options={options}  />
+
+    <>
+      {showChart &&
+
+        <Line className="graphic" data={data} options={options} />
+
+      }
+
+    </>
   );
 }

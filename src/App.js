@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import UserCard from './components/UserCard';
 import Graphic from './components/Graphic';
+import NotificationModal from './components/NotificationModal';
 
 function App() {
   const [searchInput, setSearchInput] = useState('')
@@ -11,25 +12,6 @@ function App() {
   const [showGraphic, setShowGraphic] = useState(false)
   const [showUsers, setShowUsers] = useState(false)
   const [users, setUsers] = useState([])
-  const [usersFollowers, setUsersFollowers] = useState([])
-  const [usersLogin, setUsersLogin] = useState([])
-  const followersList = []
-  const userList = []
-
-  const handleFollowers = (users) => {
-      users.forEach(user => {
-      fetch(user.url)
-        .then(res => res.json())
-        .then(res => {
-          followersList.push(res.followers)
-          userList.push(res.login)
-        })
-    });
-    setUsersFollowers(followersList)
-    setUsersLogin(userList)
-    setShowGraphic(true)
-    
-  }
 
   const handleSearch = async (name) => {
 
@@ -41,29 +23,32 @@ function App() {
 
         setUsers(results.slice(0, 10))
         setShowUsers(true)
-        
-        handleFollowers(users)
+        setShowGraphic(true)
 
       } catch (error) {
         setShowErrorModal(true)
         console.log(error)
       }
-      
+    }else{
+      setShowErrorModal(true)
     }
   }
 
   return (
     <>
       <header className='title-container'>
-        <h1 className='app-title'>Git Users Finder</h1>
+        <h1 className='app-title'>GitHub Users Finder</h1>
       </header>
       <main>
         <div className="search">
           <div className="search-bar">
-            <input type="text" onChange={(e) => setSearchInput(e.target.value)} />
+            <input
+              type="text"
+              onChange={(e) => setSearchInput(e.target.value)}
+              onKeyPress={(e => e.key === 'Enter' && handleSearch(searchInput))}
+            />
             <button onClick={() => handleSearch(searchInput)}><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
           </div>
-          
         </div>
         <div className="search-description">
           <p>Find Github Users Easily with Us.</p>
@@ -83,12 +68,23 @@ function App() {
               )
             })
             : null}
+
         </div>
       </main>
       <footer>
+
         {showGraphic ?
-          <Graphic followers={followersList} login={usersLogin} users={users}/>
+          <>
+            <button className="followers" onClick={() => { handleSearch(searchInput) }}>Show Followers</button>
+            <Graphic users={users} />
+
+          </>
           : null}
+
+        {showErrorModal ?
+          <NotificationModal message="Something went Wrong. You should use less than 4 characters or use a prohibited word, try again." action={() => setShowErrorModal(false)}/>
+          : null}
+
       </footer>
     </>
   );
