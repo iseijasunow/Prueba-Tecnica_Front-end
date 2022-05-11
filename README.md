@@ -1,3 +1,15 @@
+## Nahuel Gómez
+
+# Prueba técnica finalizada
+
+- Se empleo el uso de 'React Icons' para el renderizado de los iconos.
+- Para el manejo de rutas usé 'React Router'.
+- Realicé la creación de un hook para notificar al usuario de los errores.
+- Al momento de estilizar el código, se usó 'SASS'.
+- Decidí utilizar 'Flex' y 'Grid' para el manejo de las columnas.
+
+--------------------------------------------------------
+
 # Prueba Técnica - Programador (Front-end)
 
 La siguiente es una prueba para evaluar a los postulantes a programador **Front-end**.

@@ -1,0 +1,85 @@
+.user-detail {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+
+  .user-detail-title {
+    font-size: 3rem;
+    margin: 1rem 0 0 0;
+    color: black;
+    text-transform: uppercase;
+  }
+
+  .user-detail-id {
+    font-size: 1.5rem;
+    color: black;
+    margin: 0 0 1rem 0;
+  }
+
+  .user-detail-avatar {
+    border-radius: 50%;
+    max-width: 40%;
+    margin: 0 0 1rem 0;
+  }
+
+  .user-detail-bio {
+    font-size: 1.2rem;
+    color: black;
+  }
+
+  .user-detail-location {
+    font-size: 1.2rem;
+    color: black;
+  }
+
+  .user-detail-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .user-detail-link {
+      font-size: 1.2rem;
+      color: black;
+      border: 1px solid black;
+      border-radius: 0.5rem;
+      padding: 0.4rem 1.2rem;
+      margin: 0 0.5rem;
+      transition: all 0.3s;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        cursor: pointer;
+        background-color: black;
+        color: white;
+        border: 1px solid white;
+        transition: all 0.3s;
+      }
+    }
+  }
+
+  .btn-back {
+      width: 20%;
+    font-size: 1.2rem;
+    color: black;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    padding: 0.4rem 1.2rem;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem auto;
+
+    &:hover {
+      cursor: pointer;
+        background-color: black;
+        color: white;
+        border: 1px solid white;
+        transition: all 0.3s;
+    }
+  }
+}
