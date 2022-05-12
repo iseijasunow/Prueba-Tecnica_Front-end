@@ -1,0 +1,74 @@
+@import "../../../styles/variables.scss";
+
+.contentUser {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  padding: $spacing-xl;
+  height: fit-content;
+  background-color: #fefbf3;
+  margin: 1rem 1rem 0.5rem 1rem;
+  box-shadow: 0px 10px 25px rgba(92, 99, 105, 0.2);
+
+  &__btn {
+    background-color: $primary;
+    border: 1px solid transparent;
+    border-radius: $border-radius;
+    padding: $spacing-sm 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: $light;
+    width: 100%;
+    cursor: pointer;
+    @include breackpoint(md) {
+      width: 100%;
+    }
+    opacity: 0.9;
+    outline: none;
+    transition: 0.3s ease all;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-right: 0.7rem;
+
+    &:hover {
+      opacity: 1;
+      box-shadow: 0px 10px 25px rgba(92, 99, 105, 0.2);
+    }
+    &:active {
+      border: 1px solid $light;
+      transition: ease all;
+    }
+  }
+
+  &__image {
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    padding: 3px;
+    background: $gradient;
+
+    &__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #fff;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    height: 100%;
+    background-color: #fefbf3;
+    margin: 1rem 1rem 0.5rem 1rem;
+  }
+}
