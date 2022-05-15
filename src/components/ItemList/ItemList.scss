@@ -1,0 +1,33 @@
+.item-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1rem;
+  margin: 1rem 0;
+
+  .item-list-item {
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    transition: all 0.3s;
+
+    &:hover {
+      transition: all 0.3s;
+    }
+
+    .button {
+      border: 1px solid rgb(121, 120, 120);
+      cursor: pointer;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      padding: 0.3rem 0.8rem;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: rgba(204, 198, 198, 0.507);
+        border: 1px solid rgb(121, 120, 120);
+        transition: all 0.3s;
+      }
+    }
+  }
+}
