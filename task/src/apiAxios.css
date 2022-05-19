@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Open+Sans:ital,wght@1,600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height:100%;
+    max-width: 100%;
+    }
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 20%;
+        height: 62vh;
+        overflow: hidden;
+        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+        border-radius: 1em;
+        backdrop-filter: blur(20px);
+        margin: 1rem;
+        -webkit-border-radius: 1em;
+        -moz-border-radius: 1em;
+        -ms-border-radius: 1em;
+        -o-border-radius: 1em;
+        background-color: rgba(255, 255, 255, 0.181);
+        padding: 0.3rem 0.3rem;
+       }
+       
+       .card:hover {
+        border: #006fff 0.2em solid;
+       }
+
+      .card img{
+        display: flex;
+        width: 100%;
+        padding: .1rem .1rem;
+        height: 35vh;
+        border-radius: 1rem;
+
+      }
+      .card div{
+        text-align: center;
+      } 
+
+      .todoSearch{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2rem;
+      }
+      .title{
+        margin: 1rem;
+        font-size: 3rem;
+      }
+      input{
+        height: 2.5rem;
+        width: 25rem;  
+        padding: 0.9rem;
+        border-radius: 1rem;
+        border: none;
+        margin-bottom: 1.5rem;
+      }
+      .url-user{
+      font-size: 1.3rem;
+
+      }
+
+      .loader{
+        text-align: center;
+        width: 80%;
+        height: 25vh;
+        overflow: hidden;
+        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+        border-radius: 1em;
+        backdrop-filter: blur(20px);
+        margin: 1rem;
+        -webkit-border-radius: 1em;
+        -moz-border-radius: 1em;
+        -ms-border-radius: 1em;
+        -o-border-radius: 1em;
+        background-color: rgba(255, 255, 255, 0.181);
+        padding: 4rem 0.3rem;
+
+      }
+
+      @media (max-width:1280px){
+        .card{
+
+          height: 58vh;
+          width: 30%;
+        }
+        p{
+          font-size: 0.95rem;
+        }
+        
+      }
+    
+    @media (max-width:1000px){
+
+       .card{
+        height: 58vh;
+        width: 40%;
+      }
+      p{
+        font-size: 0.9rem;
+      }
+      @media (max-width:900px){
+        .card{
+          height: 58vh;
+       
+          width: 40%;
+        }
+          
+      }
+
+        }
+   @media (max-width:800px){
+          .card{
+            height: 58vh;
+         
+            width: 40%;
+          }
+            
+        }    
+    
+    @media (max-width:700px){
+      .card{
+        height: 58vh;
+        margin: 0.5rem 0.5rem;
+        width: 44%;
+      }
+      p{
+        font-size: 0.8rem;
+      }
+      input{
+        height: 2.5rem;
+        width: 15rem;  
+
+      }
+       
+        
+    }
+    
+    
+    @media (max-width:500px){
+        
+      p{
+        font-size: 1rem;
+      }
+
+      .card{
+        height: 58vh;
+        margin: 0.5rem 0.5rem;
+        width: 100%;
+        margin: 1rem 1rem;
+      }
+    }
+    
