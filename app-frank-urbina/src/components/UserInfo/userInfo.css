@@ -1,0 +1,75 @@
+
+.title{
+    border-top: 1px solid rgb(60, 152, 238);
+    border-bottom:1px  solid rgb(60, 152, 238);
+    width: 250px;
+    text-align: center;
+    margin: 2rem auto;
+    padding: .5rem 1rem;
+    color: darkblue;
+}
+
+
+.conteiner-user-info{
+    width: 350px;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 20px;
+    text-align: center;
+    box-shadow:  2px 2px 8px rgba(0, 0, 0, .3);
+    border-radius: 10px;
+}
+
+.conteiner-user-info{
+    display: flex;
+    gap: 10px;
+}
+
+.conteiner-user-info img{
+    border-radius: 10px;
+    box-shadow:  2px 2px 8px rgba(0, 0, 0, .3);
+}
+
+.info-user{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+
+
+ /* *******Progress-Bars****** */
+progress{
+    width: 100%;
+    height: 1.5rem;
+    background-color: gray;
+    border: 1px solid black;
+}
+progress::-webkit-progress-bar{
+  background-color: rgb(228, 222, 222);
+}
+progress::-webkit-progress-value{
+  background-color:black ;
+}
+
+.progres-bars p{
+    display: flex;
+    justify-content:space-between;
+}
+
+
+.btn{
+    position: fixed;
+    z-index: 10;
+    left: 30px;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    background-color: lawngreen;
+  }
