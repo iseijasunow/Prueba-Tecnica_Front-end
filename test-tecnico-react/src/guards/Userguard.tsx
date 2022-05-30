@@ -5,7 +5,8 @@ const { login } = useParams();
   if(login){
    return  <GetUserComponent login={login} />
   }
-  return <Navigate to='/' />
+  // returns to main page
+  return <Navigate to='/'/>
 }
 
-export default Userguard
+export default Userguard 
