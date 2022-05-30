@@ -2,7 +2,6 @@ import { IResjsonInterface } from "../interfaces/resjsonInterface";
 import { IUser } from "../interfaces/userInterface";
 
 const baseURL: string = "https://api.github.com/";
-console.log(process.env.REACT_APP_TOKEN_GIT_HUB2);
 const headers ={
     "Authorization": `Basic Token ${process.env.REACT_APP_TOKEN_GIT_HUB2}`
 }
@@ -23,7 +22,6 @@ const getTenUsers = async (usersName: string) => {
                 followers:userInfo.followers
             })
         } catch (error) {
-            console.log(error);
         }
       }))
 
