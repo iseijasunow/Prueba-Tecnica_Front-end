@@ -1,0 +1,16 @@
+.mainContainer{
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    position: fixed;
+    bottom: 150px;
+    right: 50px;
+    background: #F66B0E;
+    transition: .3s;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);   
+    
+}
+.mainContainer:hover{
+    background-color: #205375;
+}

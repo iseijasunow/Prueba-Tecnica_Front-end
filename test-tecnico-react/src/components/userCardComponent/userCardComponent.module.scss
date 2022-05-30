@@ -1,0 +1,45 @@
+.mainContainer{
+    width:300px;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: relative;
+    overflow: hidden;
+    img{
+        width: 100%;
+        position: absolute;
+        transition: transform .5s ease;
+    }
+    .infoContainer{
+       position: absolute;
+       width: 100%;
+       height: 100%;
+       background:#20537570;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+        h3,h4{
+            margin: 0;
+            color: #fff;
+        }
+        a{
+            margin-top: 20px;
+            background: #F66B0E;
+            text-decoration: none;
+            color: #fff;
+            width: 100px;
+            text-align: center;
+            padding: 10px 0;
+            transition: .3s;
+        }
+        a:hover{
+            background-color: #205375;
+        }
+    }
+}
+.mainContainer:hover img{
+    transform:scale(1.5)
+}
