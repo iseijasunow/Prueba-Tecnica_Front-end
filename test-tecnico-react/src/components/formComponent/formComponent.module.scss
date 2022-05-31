@@ -1,0 +1,34 @@
+.mainContainer{
+    form{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 400px;
+        input{
+            background-color: transparent;
+            border:none;
+            color: #205375;
+            border-bottom:solid;
+            margin-bottom: 20px;
+            font-size: 30px;
+            text-align: center;
+            outline-width: 0;
+            outline: none;
+            width: 300px;
+        }
+        button{
+            width: 200px;
+            font-size: 20px;
+            border:none;
+            background-color: #F66B0E;
+            color: #fff;
+            padding: 6px 0;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            transition: .3s;
+        }
+        button:hover{
+            background: #205375;
+        }
+    }
+}

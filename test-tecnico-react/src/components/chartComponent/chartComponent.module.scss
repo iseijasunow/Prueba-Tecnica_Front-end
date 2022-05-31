@@ -1,0 +1,25 @@
+.mainContainer{
+    margin: 100px 0;  
+    width: 1000px;
+    h1{
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    .mainContainer{ 
+        width:700px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .mainContainer{
+        width:500px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .mainContainer{
+        width:300px;
+    }
+}
