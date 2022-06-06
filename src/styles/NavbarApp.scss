@@ -1,0 +1,28 @@
+@import 'vars';
+
+.navbar-app {
+  overflow: hidden;
+  background-color: $dark;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  a.brand{
+    font-family: $font-title;
+  }
+  a {
+    float: left;
+    display: flex;
+    color: $basic-gray;
+    padding: 15px 20px;
+    text-decoration: none;
+    align-items: center;
+  }
+  a:hover {
+    background: #d3d3d338;
+    color: $basic-black;
+  }
+  svg{
+    margin-right: 7px;
+  }
+}

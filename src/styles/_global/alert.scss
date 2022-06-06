@@ -1,0 +1,41 @@
+@import '../vars';
+
+.alert-app{
+  position: relative;
+  padding: 1rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  .body-alert{
+    width: 95%;
+    display: flex;
+    align-items: center;
+    span.message{
+      margin-left: 1rem;
+    }
+  }
+  .hide-content{
+    display: flex;
+    justify-content: flex-end;
+    width: 5%;
+  }
+}
+
+.alert-app.success{
+  color: #0f5132;
+  background-color: #d1e7dd;
+  border-color: #badbcc;
+}
+.alert-app.warning{
+  color: #664d03;
+  background-color: #fff3cd;
+  border-color: #ffecb5;
+}
+
+.alert-app.danger{
+  color: #842029;
+  background-color: #f8d7da;
+  border-color: #f5c2c7;
+}

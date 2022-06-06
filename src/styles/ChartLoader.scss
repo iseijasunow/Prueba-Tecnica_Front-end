@@ -1,0 +1,9 @@
+@import 'vars';
+
+.chart-loader{
+  margin-top: 1rem;
+  width: 100%;
+  min-height: 300px;
+  display: flex;
+  border: 4px dashed $primary;
+}

@@ -1,0 +1,28 @@
+@import 'vars';
+.not-found-page {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: -1;
+  h2,
+  h4 {
+    text-align: center;
+    margin: 0 0 1rem 0;
+  }
+  h2 {
+    color: $primary;
+    font-family: $font-basic;
+    font-size: 1.7rem;
+  }
+  img {
+    margin-bottom: 1rem;
+    max-width: 300px;
+    color: $text;
+  }
+}

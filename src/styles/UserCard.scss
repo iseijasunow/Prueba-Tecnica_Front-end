@@ -1,0 +1,26 @@
+@import 'vars';
+
+.user-card{
+  flex-direction: row !important;
+  padding: 20px;
+  justify-content: space-between;
+  img{
+    border-radius: 50%;
+    max-width: 4rem;
+    max-height: 4rem;
+  }
+  .body-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    h3{
+      color: $primary;
+      margin: 0;
+    }
+    h5{
+      margin: 0;
+      color: $secondary;
+    }
+  }
+}
