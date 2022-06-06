@@ -1,3 +1,11 @@
+# Entrega del proyecto
+
+## Inicializar el proyecto
+
+- Clonar el repositorio con git clone
+- Instalar dependencias con npm install
+- ejecutar el script npm run start
+
 # Prueba Técnica - Programador (Front-end)
 
 La siguiente es una prueba para evaluar a los postulantes a programador **Front-end**.
@@ -10,12 +18,13 @@ Este repositorio contiene una serie de requerimientos de un Caso Práctico, que 
 
 Principalmente los siguientes aspectos:
 
-+ Creatividad para resolver los requerimientos,
-+ Calidad del código entregado (estructura y buenas prácticas),
-+ Eficiencia de los algoritmos entregados,
-+ Familiaridad con Frameworks y plataformas de desarrollo Web.
+- Creatividad para resolver los requerimientos,
+- Calidad del código entregado (estructura y buenas prácticas),
+- Eficiencia de los algoritmos entregados,
+- Familiaridad con Frameworks y plataformas de desarrollo Web.
 
 ## IMPORTANTE
+
 1. Asegúrate de tener `Node.js` y `npm` instalados.
 
 2. Se solicita crear la aplicación utilizando estas tecnologías:
@@ -24,17 +33,17 @@ Principalmente los siguientes aspectos:
 
 3. Se requiere de una **cuenta de GitHub** para realizar este ejercicio.
 
-4.  **Antes de comenzar a programar:**
+4. **Antes de comenzar a programar:**
 
-* Realizar un `Fork` de este repositorio (https://github.com/iseijasunow/Prueba-Tecnica_Front-end).
-* Clonar el fork a su máquina local `git clone git@github.com:USERNAME/FORKED-PROJECT.git`
-* Crear un `branch` en su cuenta de GitHub utilizando su nombre completo.
+- Realizar un `Fork` de este repositorio (https://github.com/iseijasunow/Prueba-Tecnica_Front-end).
+- Clonar el fork a su máquina local `git clone git@github.com:USERNAME/FORKED-PROJECT.git`
+- Crear un `branch` en su cuenta de GitHub utilizando su nombre completo.
 
 5.  **Al finalizar**, existen 2 (dos) opciones para entregar su proyecto:
 
-* 1) Realizar un `Commit` de su proyecto, **enviar un `Pull Request` al branch con su NOMBRE**, y notificar a la siguiente dirección de correo electrónico [mrequena@unow.es](mailto:mrequena@unow.es).
+- 1. Realizar un `Commit` de su proyecto, **enviar un `Pull Request` al branch con su NOMBRE**, y notificar a la siguiente dirección de correo electrónico [mrequena@unow.es](mailto:mrequena@unow.es).
 
-* 2) Crear un archivo comprimido (_.zip_ o _.rar_) de su proyecto y enviar a la siguiente dirección de correo electrónico [mrequena@unow.es](mailto:mrequena@unow.es).
+- 2. Crear un archivo comprimido (_.zip_ o _.rar_) de su proyecto y enviar a la siguiente dirección de correo electrónico [mrequena@unow.es](mailto:mrequena@unow.es).
 
 ## EJERCICIO PRÁCTICO
 
@@ -42,7 +51,6 @@ Principalmente los siguientes aspectos:
 
 **Nota** YOUR_NAME es un query string "parámetro"
 
- 
 #### Requerimientos generales
 
 1. La aplicación debe cumplir con los siguientes **requisitos funcionales:**
@@ -63,7 +71,7 @@ Principalmente los siguientes aspectos:
 
 - Incluir un componente para mostrar mensajes de Errores Generales en toda la aplicación.
 
-2.  **CSS:** Utilizar CSS Grid y/o CSS Flexbox, para la maquetación del proyecto 
+2.  **CSS:** Utilizar CSS Grid y/o CSS Flexbox, para la maquetación del proyecto
 
 3.  **Iconos:** Utilizar una librería para el manejo de iconos donde lo considere necesario (_se recomienda el uso de [Font Awesome](http://fontawesome.io/) o [Glyphicons](http://glyphicons.com/)._)
 
