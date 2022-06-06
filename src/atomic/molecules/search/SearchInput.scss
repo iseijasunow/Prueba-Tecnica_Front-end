@@ -1,0 +1,90 @@
+@import "../../../styles/variables.scss";
+
+.search_input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  &__bar {
+    background-color: $light;
+    border: none;
+    border-radius: $border-radius;
+    padding: $spacing-md 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    height: 40px;
+    color: $dark;
+    width: 400px;
+    opacity: 0.7;
+    margin-right: 1rem;
+    outline: none;
+    box-shadow: 0px 10px 25px rgba(92, 99, 105, 0.2);
+    @include breackpoint(md) {
+      width: 100%;
+    }
+    transition: 0.3s ease all;
+  }
+
+  &__btn {
+    background-color: $primary;
+    border: 1px solid transparent;
+    border-radius: $border-radius;
+    padding: $spacing-sm 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: $light;
+    width: 100px;
+    cursor: pointer;
+    @include breackpoint(md) {
+      width: 100%;
+    }
+    opacity: 0.9;
+    outline: none;
+    transition: 0.3s ease all;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-right: 0.7rem;
+
+    &:hover {
+      opacity: 1;
+      box-shadow: 0px 10px 25px rgba(92, 99, 105, 0.2);
+    }
+    &:active {
+      border: 1px solid $light;
+      transition: ease all;
+    }
+
+    &__disables {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+  }
+
+  &__btn_reset {
+    background-color: transparent;
+    border: 1px solid $primary;
+    color: $primary;
+    cursor: pointer;
+    opacity: 0.9;
+    outline: none;
+    transition: 0.3s ease all;
+    width: flix-content;
+    height: 40px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    &:hover {
+      opacity: 1;
+      box-shadow: 0px 10px 25px rgba(92, 99, 105, 0.2);
+    }
+    &:active {
+      border: 1px solid $light;
+      transition: ease all;
+    }
+  }
+}

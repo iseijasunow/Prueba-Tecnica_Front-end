@@ -1,0 +1,8 @@
+@import "../../../styles/variables.scss";
+
+.layout_container {
+  display: grid;
+  grid-auto-rows: minmax(100px, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: 1rem;
+}

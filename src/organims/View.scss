@@ -1,0 +1,52 @@
+@import "../styles/variables.scss";
+
+.header {
+  position: relative;
+  background-color: #4158d0;
+  background-image: linear-gradient(
+    146deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
+  );
+  padding: 0% 1.5rem;
+  @include breackpoint(md) {
+    padding: 0 3rem;
+  }
+  transition: 0.3s ease all;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    @include breackpoint(md) {
+      flex-direction: row;
+    }
+  }
+}
+
+.custom-shape-divider-bottom-1652153118 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1652153118 svg {
+  position: relative;
+  display: block;
+  width: calc(136% + 1.3px);
+  height: 134px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1652153118 .shape-fill {
+  fill: #ffffff;
+}
