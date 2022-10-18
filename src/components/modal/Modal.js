@@ -3,11 +3,11 @@ import styles from './Modal.module.css'
 import ReactDOM from 'react-dom'
 
 export default function Modal(props) {
-    const {show, onClose} = props
+    const {show, handleClose} = props
 
     const closeOnEscapeKeyDown = (e) => {
         if(e.key === 'Escape' && show) {        
-            onClose()
+            handleClose()
         }
     }
 
@@ -19,7 +19,7 @@ export default function Modal(props) {
     }, [show])
 
     return ReactDOM.createPortal(
-        <div className={`${styles.modal} ${show ? styles.show : ''}` } onClick={onClose} >
+        <div className={`${styles.modal} ${show ? styles.show : ''}` } onClick={handleClose} >
             <div className={styles.modalContent}  onClick={(e) => e.stopPropagation()}>
                {show && props.children} 
             </div>

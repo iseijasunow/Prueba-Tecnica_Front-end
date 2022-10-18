@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { LoadingPage } from '../../components/loading/LoadingPage/LoadingPage'
 import Modal from '../../components/modal/Modal'
-import { Notification } from '../../components/notifications/Notification'
-import { FAILED, IDLE, LOADING } from '../../constants/constants'
+import { Notification } from '../../components/notifications/modal/Notification'
+import { FAILED, IDLE, LOADING } from '../../utils/constants/constants'
 import { getUser } from '../../services/api/users/usersApi'
 import styles from './User.module.css'
 
@@ -12,7 +12,7 @@ export const User = () => {
     const params = useParams()
     const navigate = useNavigate()
 
-    const onClose = () => {
+    const handleClose = () => {
         setState({...state, error: '', status: IDLE})
     }
 
@@ -33,7 +33,11 @@ export const User = () => {
     
     return (
         <div>
-            {state.error && <Modal onClose={onClose} show={true}><Notification onClose={onClose} /></Modal>}
+            {state.error && 
+                <Modal handleClose={handleClose} show={true}>
+                    <Notification handleClose={handleClose} />
+                </Modal>
+            }
             {state.status === LOADING && <LoadingPage />}
             <div className={styles.container} >
                 <div className='flex-center'>
