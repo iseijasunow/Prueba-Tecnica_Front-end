@@ -1,0 +1,74 @@
+main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0.5rem;
+  border: solid 2px #4396de;
+  border-radius: 0.5rem;
+  margin-top: 5rem;
+  input {
+    font-size: 1.6rem;
+    padding: 0.5rem;
+    color: #4396de;
+  }
+  button {
+    font-size: 1.8rem;
+    background-color: transparent;
+    margin-top: 1rem;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border: solid 2px #4396de;
+    &:hover {
+      background-color: #4396de;
+    }
+  }
+}
+
+.user-list {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.user-card {
+  border: solid 0.3rem #000;
+  margin: 0.5rem auto;
+
+  text-align: center;
+  img {
+    max-width: 100%;
+  }
+  a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #4396de;
+    text-decoration: none;
+  }
+  .detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+}
+.warning {
+  position: absolute;
+  bottom: 2rem;
+  left: 1rem;
+  right: 1rem;
+  padding: 0.2rem;
+  border-radius: 0.5rem;
+  background-color: hsl(11deg 100% 42%);
+  color: #fff;
+  text-align: center;
+}
