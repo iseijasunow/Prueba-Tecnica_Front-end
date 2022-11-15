@@ -1,0 +1,16 @@
+.data-user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+.data-user .data-user-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.data-user .avatar-user {
+  border-radius: 5px;
+  max-width: 200px;
+}/*# sourceMappingURL=DataUser.css.map */
