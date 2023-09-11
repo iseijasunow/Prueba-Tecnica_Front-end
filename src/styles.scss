@@ -1,0 +1,342 @@
+$unow-color: #794dfd;
+$body-bg-color: #fefefe;
+$body-text-color: #1f2937;
+$error-bg-color: #f87171;
+$white-color: #ffffff;
+$gray-secondary: #dedede;
+
+* {
+  transition: all 0.2s;
+  font-family: "Nunito", sans-serif;
+  text-decoration: none;
+  color: $body-text-color;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $body-bg-color;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.layout {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto;
+}
+
+.h-50 {
+  height: 50vh;
+}
+
+.h-80 {
+  height: 80vh;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.container {
+  width: 70%;
+}
+
+.form {
+  display: flex;
+  gap: 20px;
+}
+
+.block {
+  display: block;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.content-center {
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.gap {
+  gap: 10px;
+}
+
+.break-all {
+  word-break: break-all;
+}
+
+.bold {
+  font-weight: 800;
+}
+
+.text-m {
+  font-size: 20px;
+  line-height: 0.8em;
+}
+
+.text-l {
+  font-size: 30px;
+  line-height: 0.8em;
+}
+
+.text-3xl {
+  font-size: 180px;
+  line-height: 0.8em;
+}
+
+.py-5 {
+  padding: 10px 0;
+}
+
+.px-5 {
+  padding: 0 10px;
+}
+
+.px-10 {
+  padding: 0 20px;
+}
+
+.p-5 {
+  padding: 10px;
+}
+
+.m-0 {
+  margin: 0px;
+}
+
+.mt-5 {
+  margin-top: 20px;
+}
+
+.mt-10 {
+  margin-top: 40px;
+}
+
+.mb-10 {
+  margin-bottom: 40px;
+}
+
+.my-10 {
+  margin: 40px 0;
+}
+
+.mx-10 {
+  margin: 0 40px;
+}
+
+.rounded {
+  border-radius: 10px;
+}
+
+.rounded-full {
+  border-radius: 100%;
+  border: 2px solid $unow-color;
+  padding: 5px;
+}
+
+.input {
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 18px;
+  border: 1px solid $gray-secondary;
+  box-shadow: 0px 0px 7px 0rem #794dfd4f;
+  outline: none;
+}
+
+.input:hover,
+.input:focus {
+  border: 1px solid $unow-color;
+  box-shadow: 0px 0px 7px 0rem #794dfd4f;
+}
+
+.card {
+  box-shadow: 2px 2px 10px 0px $gray-secondary;
+}
+
+.card:hover {
+  background-color: #f4f4f4;
+}
+
+.border-gray {
+  border-top: 1px solid $gray-secondary;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-unow {
+  color: $unow-color;
+}
+
+.text-white {
+  color: $white-color;
+}
+
+.error-message {
+  background-color: $error-bg-color;
+  padding: 15px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: $white-color;
+}
+
+.error-message p {
+  color: $white-color;
+  margin: 0;
+  font-size: 20px;
+}
+
+.button {
+  background-color: $unow-color;
+  padding: 10px 15px;
+  border: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.button a,
+i {
+  color: $white-color;
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.button:hover {
+  background-color: $body-text-color;
+}
+
+.profile-background {
+  background: linear-gradient(
+    180deg,
+    rgba(121, 77, 253, 0.8) 0%,
+    rgba(255, 255, 255, 1) 93%
+  );
+  height: 250px;
+  width: 100%;
+}
+
+.profile-container {
+  margin-top: -150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-img {
+  width: 250px;
+}
+
+.profile-icon {
+  font-size: 50px;
+  color: $unow-color;
+  transform: scale(1);
+  animation: pulse 1.4s infinite;
+  border-radius: 100%;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 $gray-secondary;
+  }
+
+  50% {
+    transform: scale(1.2);
+    box-shadow: 0 0 0 8px rgba(0, 0, 0, 0);
+  }
+}
+.profile-icon:hover {
+  font-size: 65px;
+  color: $body-text-color;
+  animation: none;
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 8px solid;
+  border-color: $unow-color $white-color;
+  animation: l1 1s infinite;
+}
+@keyframes l1 {
+  to {
+    transform: rotate(0.5turn);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+  .footer {
+    position: inherit;
+    width: auto;
+  }
+
+  .form {
+    flex-direction: column;
+  }
+  .form button {
+    justify-content: center;
+  }
+
+  .error-message {
+    flex-direction: column;
+  }
+
+  .error-message i {
+    color: $white-color;
+    margin: 0;
+    font-size: 30px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .px-10 {
+    padding: 0px !important;
+  }
+}
