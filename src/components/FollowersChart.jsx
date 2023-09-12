@@ -46,39 +46,36 @@ const FollowersChart = ({ urls }) => {
   if (data.length) {
     const labels = data.map((data) => data.login);
     const followers = data.map((data) => data.followers);
-    chart = [
-      {
-        labels: labels,
-        datasets: [
-          {
-            label: "Seguidores (Github)",
-            data: followers,
-            backgroundColor: [
-              "#FFDDC1",
-              "#FFC3A0",
-              "#A0CED9",
-              "#B5EAD7",
-              "#FFABAB",
-              "#A9A9A9",
-              "#FFDFD3",
-              "#C7CEEA",
-              "#E2F0CB",
-              "#F5E4B7",
-            ],
-
-            borderColor: "black",
-            borderWidth: 1,
-          },
-        ],
-      },
-    ];
+    chart = {
+      labels: labels,
+      datasets: [
+        {
+          label: "Seguidores (Github)",
+          data: followers,
+          backgroundColor: [
+            "#FFDDC1",
+            "#FFC3A0",
+            "#A0CED9",
+            "#B5EAD7",
+            "#FFABAB",
+            "#A9A9A9",
+            "#FFDFD3",
+            "#C7CEEA",
+            "#E2F0CB",
+            "#F5E4B7",
+          ],
+          borderColor: "#1f2937",
+          borderWidth: 1,
+        },
+      ],
+    };
   }
 
   return (
     <>
       {data.length ? (
         <div>
-          <Bar data={chart[0]} options={options} />
+          <Bar data={chart} options={options} />
         </div>
       ) : (
         ""
