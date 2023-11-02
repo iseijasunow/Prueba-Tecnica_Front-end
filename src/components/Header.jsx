@@ -7,7 +7,7 @@ const Header = () => {
         <nav className="container">
           <div>
             <Link to="/">
-              <img src="/img/unowLogo.svg" alt="" />
+              <h1 className="text-unow">EvansDev ;)</h1>
             </Link>
           </div>
         </nav>
