@@ -1,0 +1,18 @@
+@import "App.scss";
+
+$background-color: #ffffff;
+$text-color: #000000;
+$link-color: #0a84ff;
+$button-background: #ffffff;
+$button-hover: #5a5a5c;
+$border-color: #646cff;
+
+body {
+  margin: 0;
+  font-family: $font-family;
+  font-weight: $font-regular;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $background-color;
+  color: $text-color;
+}
