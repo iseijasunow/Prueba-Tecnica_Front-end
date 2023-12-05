@@ -1,5 +1,7 @@
 # API de usuarios de GitHub
 
+**Este contenido puede ser actualizado siempre dentro del plazo de entrega**
+
 - [API de usuarios de GitHub](#api-de-usuarios-de-github)
   - [Instalación](#instalación)
     - [Comprobar versiones](#comprobar-versiones)
@@ -15,9 +17,18 @@
     - [Uso del Plugin de React en Vite](#uso-del-plugin-de-react-en-vite)
   - [Pasos](#pasos)
     - [Acerca del SCSS](#acerca-del-scss)
-  - [Entregables](#entregables)
+
+![Input](https://github.com/miguelgargallo/Prueba-Tecnica_Front-end/assets/5947268/db209836-0cba-46bf-931c-c6f748ded01f)
+![Input mas selector](https://github.com/miguelgargallo/Prueba-Tecnica_Front-end/assets/5947268/ceff2c85-5636-43f8-8a75-5a3ba8fc02d4)
+![Componente de error](https://github.com/miguelgargallo/Prueba-Tecnica_Front-end/assets/5947268/3ee34898-0cfe-4dd0-8545-ad8da8fef675)
+![10 resultados de búsqueda con gráfica](https://github.com/miguelgargallo/Prueba-Tecnica_Front-end/assets/5947268/0f6ff6e4-b5c3-45cb-b95b-4d3462057854)
+![Tarjeta con regalo](https://github.com/miguelgargallo/Prueba-Tecnica_Front-end/assets/5947268/865ab646-1f48-4e7e-8e17-1d1da17d2baf)
+
 
 ## Instalación
+
+- ✅ Se requiere token
+- ✅ Se debe `cp` a .env.example .env y luego añadir su token para el acceso de la API, por temas de limitaciones de github, lo mejor es usarlo, actualmente esta tarea se puede ver en vivo en [unow.vercel.app](https://unow.vercel.app)
 
 ### Comprobar versiones
 
@@ -58,6 +69,7 @@ pnpm add sass
 
 (Porque pnpm)[https://pnpm.io/pnpm-vs-npm]
 
+
 ## RRRR
 
 ### Requerimientos
@@ -75,6 +87,7 @@ La aplicación debe mostrar eficientemente los datos de los usuarios de GitHub, 
 ### Respuestas
 
 La aplicación final debe cumplir con los requisitos funcionales especificados, ser eficiente en términos de código y algoritmos, y reflejar la creatividad y las buenas prácticas de programación.
+
 
 ## ¿Por qué usar Vite?
 
@@ -103,6 +116,7 @@ export default defineConfig({
 ```
 
 Este enfoque proporciona una experiencia de desarrollo más fluida y rápida, ideal para proyectos con limitaciones de tiempo.
+
 
 ## Pasos
 
@@ -151,15 +165,3 @@ Gestión de Errores: Implementar un sistema para mostrar mensajes de error en la
 
 He optimizado los archivos SCSS en los archivos, App e Index en formato SCSS, para que sea más fácil de leer y mantener. Usando los archivos de variables para los colores y fuentes, y un archivo de mixins para los estilos reutilizables.
 
-## Entregables
-
-- [x] Crear una aplicación que incluya un campo de entrada texto y un botón, para que se pueda capturar el usuario y recuperar la información utilizando el API anteriormente indicada. [./src/App.tsx](./src/App.tsx)
-- [x] Mostrar los primeros 10 usuarios del resultado de la búsqueda, incluyendo su nombre de usuario ('user.login') y el id ('user.id') de cada registro. [./src/ui/Form.tsx](./src/ui/Form.tsx)
-- [x] Convertir cada Perfil de usuario en un enlace, para que al hacer clic en cada registro, navegue a una ruta que incluya la propiedad 'user.login' como parámetro. [./src/ui/Form.tsx](./src/ui/Form.tsx)
-- [x] Crear un componente independiente en el que se lea el parámetro de la URL, y a continuación, obtenga los datos de dicho usuario mediante la siguiente API: https://api.github.com/users/YOUR_NAME [./src/ui/Form.tsx](./src/ui/Form.tsx) y [./src/ui/UserDetail.tsx](./src/ui/UserDetail.tsx)
-- [x] Incluir la imagen del usuario ('avatar_url') y alguna otra información (de su elección) en el componente. [./src/ui/UserDetail.tsx](./src/ui/UserDetail.tsx)
-- [x] Incluir un validador que verifique que el texto de búsqueda de usuarios sea de un mínimo de 4 caracteres, y otro que NO permita realizar la búsqueda de la palabra “iseijasunow”. [./src/ui/Form.tsx](./src/ui/Form.tsx)
-- [x] Integrar cualquier librería de gráficos que pueda encontrar y crear un gráfico de barras simple para mostrar el número de seguidores de los 10 primeros usuarios. [./src/ui/Form.tsx](./src/ui/Form.tsx)
-- [x] Incluir un componente para mostrar mensajes de Errores Generales en toda la aplicación. [./src/ui/Toast.tsx](./src/ui/Toast.tsx)
-- [x] CSS: Utilizar CSS Grid y/o CSS Flexbox, para la maquetación del proyecto [./src/App.scss](./src/App.scss) y [./src/index.scss](./src/index.scss)
-- [x] Iconos: Utilizar una librería para el manejo de iconos Tabler Icons es algo que he propuesto como aportación personal. [./src/ui/Form.tsx](./src/ui/Form.tsx) y [./src/ui/UserDetail.tsx](./src/ui/UserDetail.tsx)
