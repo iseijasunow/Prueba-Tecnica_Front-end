@@ -165,5 +165,5 @@ Gestión de Errores: Implementar un sistema para mostrar mensajes de error en la
 
 ### Acerca del SCSS
 
-He optimizado los archivos SCSS en los archivos, App e Index en formato SCSS, para que sea más fácil de leer y mantener. Usando los archivos de variables para los colores y fuentes, y un archivo de mixins para los estilos reutilizables.
+He optimizado los archivos SCSS en los archivos, App e Index en formato SCSS, para que sea más fácil de leer y mantener. Usando los archivos de variables para los colores y fuentes, y con los estilos reutilizables.
 
