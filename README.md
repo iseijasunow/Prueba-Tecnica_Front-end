@@ -1,7 +1,5 @@
 # API de usuarios de GitHub
 
-**Este contenido puede ser actualizado siempre dentro del plazo de entrega**
-
 - [API de usuarios de GitHub](#api-de-usuarios-de-github)
   - [Instalación](#instalación)
     - [Comprobar versiones](#comprobar-versiones)
