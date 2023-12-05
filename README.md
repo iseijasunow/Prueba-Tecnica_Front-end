@@ -18,11 +18,13 @@
   - [Pasos](#pasos)
     - [Acerca del SCSS](#acerca-del-scss)
 
-![Input](https://github.com/miguelgargallo/Prueba-Tecnica_Front-end/assets/5947268/db209836-0cba-46bf-931c-c6f748ded01f)
-![Input mas selector](https://github.com/miguelgargallo/Prueba-Tecnica_Front-end/assets/5947268/ceff2c85-5636-43f8-8a75-5a3ba8fc02d4)
-![Componente de error](https://github.com/miguelgargallo/Prueba-Tecnica_Front-end/assets/5947268/3ee34898-0cfe-4dd0-8545-ad8da8fef675)
-![10 resultados de búsqueda con gráfica](https://github.com/miguelgargallo/Prueba-Tecnica_Front-end/assets/5947268/0f6ff6e4-b5c3-45cb-b95b-4d3462057854)
-![Tarjeta con regalo](https://github.com/miguelgargallo/Prueba-Tecnica_Front-end/assets/5947268/865ab646-1f48-4e7e-8e17-1d1da17d2baf)
+| Concepto                              | Screenshot                                                                                                                                               |
+| ------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Input                                 | ![Input](https://github.com/miguelgargallo/Prueba-Tecnica_Front-end/assets/5947268/db209836-0cba-46bf-931c-c6f748ded01f)                                 |
+| Input mas selector                    | ![Input mas selector](https://github.com/miguelgargallo/Prueba-Tecnica_Front-end/assets/5947268/ceff2c85-5636-43f8-8a75-5a3ba8fc02d4)                    |
+| Componente de error                   | ![Componente de error](https://github.com/miguelgargallo/Prueba-Tecnica_Front-end/assets/5947268/3ee34898-0cfe-4dd0-8545-ad8da8fef675)                   |
+| 10 resultados de búsqueda con gráfica | ![10 resultados de búsqueda con gráfica](https://github.com/miguelgargallo/Prueba-Tecnica_Front-end/assets/5947268/0f6ff6e4-b5c3-45cb-b95b-4d3462057854) |
+| Input                                 | ![Tarjeta con regalo](https://github.com/miguelgargallo/Prueba-Tecnica_Front-end/assets/5947268/865ab646-1f48-4e7e-8e17-1d1da17d2baf)                    |
 
 
 ## Instalación
