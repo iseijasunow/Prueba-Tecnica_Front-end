@@ -13,6 +13,11 @@
 - ✅ CSS: Utilizar CSS Grid y/o CSS Flexbox, para la maquetación del proyecto [./src/App.scss](./src/App.scss) y [./src/index.scss](./src/index.scss)
 - ✅ Iconos: Utilizar una librería para el manejo de iconos Tabler Icons es algo que he propuesto como aportación personal. [./src/ui/Form.tsx](./src/ui/Form.tsx) y [./src/ui/UserDetail.tsx](./src/ui/UserDetail.tsx)
 
+![Input](https://github.com/miguelgargallo/Prueba-Tecnica_Front-end/assets/5947268/db209836-0cba-46bf-931c-c6f748ded01f)
+![Input mas selector](https://github.com/miguelgargallo/Prueba-Tecnica_Front-end/assets/5947268/ceff2c85-5636-43f8-8a75-5a3ba8fc02d4)
+![Componente de error](https://github.com/miguelgargallo/Prueba-Tecnica_Front-end/assets/5947268/3ee34898-0cfe-4dd0-8545-ad8da8fef675)
+![10 resultados de búsqueda con gráfica](https://github.com/miguelgargallo/Prueba-Tecnica_Front-end/assets/5947268/0f6ff6e4-b5c3-45cb-b95b-4d3462057854)
+![Tarjeta con regalo](https://github.com/miguelgargallo/Prueba-Tecnica_Front-end/assets/5947268/7da30e5f-dec0-41a4-a17b-95e8b0595338)
 
 - [API de usuarios de GitHub](#api-de-usuarios-de-github)
   - [Instalación](#instalación)
