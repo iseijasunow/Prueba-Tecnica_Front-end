@@ -1,5 +1,11 @@
 # API de usuarios de GitHub
 
+**Este contenido puede ser actualizado siempre dentro del plazo de entrega**
+- [x] Se requiere token
+- [x] Se debe `cp` a .env.example .env y luego añadir su token para el acceso de la API, por temas de limitaciones de github, lo mejor es usarlo, actualmente esta tarea se puede ver en vivo en [unow.vercel.app](https://unow.vercel.app)
+
+# Entrega de la práctica
+
 - [API de usuarios de GitHub](#api-de-usuarios-de-github)
   - [Instalación](#instalación)
     - [Comprobar versiones](#comprobar-versiones)
