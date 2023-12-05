@@ -1,10 +1,18 @@
 # API de usuarios de GitHub
 
 **Este contenido puede ser actualizado siempre dentro del plazo de entrega**
-- ✅ Se requiere token
-- ✅ Se debe `cp` a .env.example .env y luego añadir su token para el acceso de la API, por temas de limitaciones de github, lo mejor es usarlo, actualmente esta tarea se puede ver en vivo en [unow.vercel.app](https://unow.vercel.app)
 
-# Entrega de la práctica
+- ✅ Crear una aplicación que incluya un campo de entrada texto y un botón, para que se pueda capturar el usuario y recuperar la información utilizando el API anteriormente indicada. [./src/App.tsx](./src/App.tsx)
+- ✅ Mostrar los primeros 10 usuarios del resultado de la búsqueda, incluyendo su nombre de usuario ('user.login') y el id ('user.id') de cada registro. [./src/ui/Form.tsx](./src/ui/Form.tsx)
+- ✅ Convertir cada Perfil de usuario en un enlace, para que al hacer clic en cada registro, navegue a una ruta que incluya la propiedad 'user.login' como parámetro. [./src/ui/Form.tsx](./src/ui/Form.tsx)
+- ✅ Crear un componente independiente en el que se lea el parámetro de la URL, y a continuación, obtenga los datos de dicho usuario mediante la siguiente API: https://api.github.com/users/YOUR_NAME [./src/ui/Form.tsx](./src/ui/Form.tsx) y [./src/ui/UserDetail.tsx](./src/ui/UserDetail.tsx)
+- ✅ Incluir la imagen del usuario ('avatar_url') y alguna otra información (de su elección) en el componente. [./src/ui/UserDetail.tsx](./src/ui/UserDetail.tsx)
+- ✅ Incluir un validador que verifique que el texto de búsqueda de usuarios sea de un mínimo de 4 caracteres, y otro que NO permita realizar la búsqueda de la palabra “iseijasunow”. [./src/ui/Form.tsx](./src/ui/Form.tsx)
+- ✅ Integrar cualquier librería de gráficos que pueda encontrar y crear un gráfico de barras simple para mostrar el número de seguidores de los 10 primeros usuarios. [./src/ui/Form.tsx](./src/ui/Form.tsx)
+- ✅ Incluir un componente para mostrar mensajes de Errores Generales en toda la aplicación. [./src/ui/Toast.tsx](./src/ui/Toast.tsx)
+- ✅ CSS: Utilizar CSS Grid y/o CSS Flexbox, para la maquetación del proyecto [./src/App.scss](./src/App.scss) y [./src/index.scss](./src/index.scss)
+- ✅ Iconos: Utilizar una librería para el manejo de iconos Tabler Icons es algo que he propuesto como aportación personal. [./src/ui/Form.tsx](./src/ui/Form.tsx) y [./src/ui/UserDetail.tsx](./src/ui/UserDetail.tsx)
+
 
 - [API de usuarios de GitHub](#api-de-usuarios-de-github)
   - [Instalación](#instalación)
@@ -24,6 +32,9 @@
   - [Entregables](#entregables)
 
 ## Instalación
+
+- ✅ Se requiere token
+- ✅ Se debe `cp` a .env.example .env y luego añadir su token para el acceso de la API, por temas de limitaciones de github, lo mejor es usarlo, actualmente esta tarea se puede ver en vivo en [unow.vercel.app](https://unow.vercel.app)
 
 ### Comprobar versiones
 
@@ -157,15 +168,3 @@ Gestión de Errores: Implementar un sistema para mostrar mensajes de error en la
 
 He optimizado los archivos SCSS en los archivos, App e Index en formato SCSS, para que sea más fácil de leer y mantener. Usando los archivos de variables para los colores y fuentes, y un archivo de mixins para los estilos reutilizables.
 
-## Entregables
-
-- [x] Crear una aplicación que incluya un campo de entrada texto y un botón, para que se pueda capturar el usuario y recuperar la información utilizando el API anteriormente indicada. [./src/App.tsx](./src/App.tsx)
-- [x] Mostrar los primeros 10 usuarios del resultado de la búsqueda, incluyendo su nombre de usuario ('user.login') y el id ('user.id') de cada registro. [./src/ui/Form.tsx](./src/ui/Form.tsx)
-- [x] Convertir cada Perfil de usuario en un enlace, para que al hacer clic en cada registro, navegue a una ruta que incluya la propiedad 'user.login' como parámetro. [./src/ui/Form.tsx](./src/ui/Form.tsx)
-- [x] Crear un componente independiente en el que se lea el parámetro de la URL, y a continuación, obtenga los datos de dicho usuario mediante la siguiente API: https://api.github.com/users/YOUR_NAME [./src/ui/Form.tsx](./src/ui/Form.tsx) y [./src/ui/UserDetail.tsx](./src/ui/UserDetail.tsx)
-- [x] Incluir la imagen del usuario ('avatar_url') y alguna otra información (de su elección) en el componente. [./src/ui/UserDetail.tsx](./src/ui/UserDetail.tsx)
-- [x] Incluir un validador que verifique que el texto de búsqueda de usuarios sea de un mínimo de 4 caracteres, y otro que NO permita realizar la búsqueda de la palabra “iseijasunow”. [./src/ui/Form.tsx](./src/ui/Form.tsx)
-- [x] Integrar cualquier librería de gráficos que pueda encontrar y crear un gráfico de barras simple para mostrar el número de seguidores de los 10 primeros usuarios. [./src/ui/Form.tsx](./src/ui/Form.tsx)
-- [x] Incluir un componente para mostrar mensajes de Errores Generales en toda la aplicación. [./src/ui/Toast.tsx](./src/ui/Toast.tsx)
-- [x] CSS: Utilizar CSS Grid y/o CSS Flexbox, para la maquetación del proyecto [./src/App.scss](./src/App.scss) y [./src/index.scss](./src/index.scss)
-- [x] Iconos: Utilizar una librería para el manejo de iconos Tabler Icons es algo que he propuesto como aportación personal. [./src/ui/Form.tsx](./src/ui/Form.tsx) y [./src/ui/UserDetail.tsx](./src/ui/UserDetail.tsx)
