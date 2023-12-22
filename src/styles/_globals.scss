@@ -1,0 +1,72 @@
+@use "variables";
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap");
+
+:root {
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: variables.$color-soft;
+  background-color: variables.$color-primary;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: variables.$font-primary;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: variables.$font-primary;
+  color: variables.$color-headings;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+body {
+  margin: 0;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+input {
+  border: none;
+  background-color: transparent;
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
