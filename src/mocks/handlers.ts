@@ -3,7 +3,7 @@ import { usersMock } from "./usersMock";
 
 export const handlers = [
   http.get(`${import.meta.env.VITE_USER_SEARCH_API_URL}?q=user1`, () => {
-    return HttpResponse.json(usersMock, { status: 200 });
+    return HttpResponse.json({ items: usersMock }, { status: 200 });
   }),
 ];
 
