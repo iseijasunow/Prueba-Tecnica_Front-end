@@ -8,5 +8,5 @@ export interface User {
 export interface ApiData {
   total_count: number;
   incomplete_results: boolean;
-  items: Partial<User[]>;
+  items: User[];
 }
