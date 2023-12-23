@@ -9,7 +9,7 @@ const useUsersApi = () => {
     async (wordToSearch: string) => {
       try {
         const response = await axios.get<ApiData>(
-          `${apiBaseUrl}?q=${wordToSearch}`,
+          `${apiBaseUrl}/search/users?q=${wordToSearch}`,
         );
         const users = response.data.items;
 
@@ -21,7 +21,23 @@ const useUsersApi = () => {
     [apiBaseUrl],
   );
 
-  return { getUsersByWordApi };
+  const getUserByLoginApi = useCallback(
+    async (login: string) => {
+      try {
+        const response = await axios.get<ApiData>(
+          `${apiBaseUrl}/users/${login}`,
+        );
+        const user = response.data;
+
+        return user;
+      } catch {
+        throw new Error("Could not find the user");
+      }
+    },
+    [apiBaseUrl],
+  );
+
+  return { getUsersByWordApi, getUserByLoginApi };
 };
 
 export default useUsersApi;
