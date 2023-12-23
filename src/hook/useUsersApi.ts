@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useCallback } from "react";
 import { User, UsersApiData } from "../types";
+import { showError } from "../utils/errors";
 
 const useUsersApi = () => {
   const apiBaseUrl = import.meta.env.VITE_USER_SEARCH_API_URL;
@@ -15,6 +16,8 @@ const useUsersApi = () => {
 
         return users;
       } catch {
+        showError();
+
         throw new Error("Could not find the user");
       }
     },
@@ -29,6 +32,8 @@ const useUsersApi = () => {
 
         return user;
       } catch {
+        showError();
+
         throw new Error("Could not find the user");
       }
     },
