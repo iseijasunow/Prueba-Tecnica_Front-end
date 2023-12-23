@@ -6,27 +6,18 @@ import UsersContext from "../../store/users/context/UsersContext";
 
 const SearchForm = () => {
   const [wordToSearch, setWordToSearch] = useState<string>("");
-  const [isShort, setIsShort] = useState<boolean>(true);
   const [message, setMessage] = useState<string>("");
 
   const { loadUsers } = useContext(UsersContext);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setWordToSearch(event.target.value);
-
-    if (wordToSearch.length < 3) {
-      setIsShort(true);
-
-      return;
-    }
-
-    setIsShort(false);
   };
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    if (isShort) {
+    if (wordToSearch.length < 4) {
       setMessage("Word must be 4 or more characters");
       loadUsers("");
 
