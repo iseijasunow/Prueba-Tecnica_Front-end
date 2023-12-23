@@ -1,7 +1,7 @@
 const paths = {
   search: "/search",
   root: "/",
-  detail: "/search/:userId",
+  detail: "/search/:login",
 };
 
 export default paths;
