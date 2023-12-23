@@ -1,0 +1,27 @@
+@use "../../styles/variables";
+
+.user-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 400px;
+  border: 1px solid variables.$color-soft;
+  border-radius: 8px;
+  padding: 6px 12px;
+
+  &__avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  > div {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  &__id {
+    font-size: 1.2rem;
+  }
+}
