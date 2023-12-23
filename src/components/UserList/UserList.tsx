@@ -8,11 +8,15 @@ const UserList = () => {
 
   return (
     <ul className="user-list">
-      {users.map((user) => (
-        <li key={user.id}>
-          <UserCard user={user} />
-        </li>
-      ))}
+      {users.map((user, index) => {
+        if (index < 10) {
+          return (
+            <li key={user.id}>
+              <UserCard user={user} />
+            </li>
+          );
+        }
+      })}
     </ul>
   );
 };

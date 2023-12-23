@@ -11,6 +11,12 @@ const UsersContextProvider = ({ children }: PropsWithChildren) => {
 
   const loadUsers = useCallback(
     async (wordToSearch: string) => {
+      if (wordToSearch === "") {
+        setUsers([]);
+
+        return;
+      }
+
       const apiUsers = await getUsersByWordApi(wordToSearch);
 
       setUsers(apiUsers);

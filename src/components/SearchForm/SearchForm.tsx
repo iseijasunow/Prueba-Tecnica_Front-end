@@ -32,7 +32,7 @@ const SearchForm = () => {
         onChange={handleChange}
       />
       <button type="submit" className="form__button">
-        <FontAwesomeIcon icon={faSearch} color="#fbfef9" size="2x" />
+        <FontAwesomeIcon icon={faSearch} color="#6f6f8b" size="2x" />
       </button>
     </form>
   );
