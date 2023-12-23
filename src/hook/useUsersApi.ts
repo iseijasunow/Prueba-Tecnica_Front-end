@@ -1,6 +1,6 @@
 import axios from "axios";
-import { ApiData } from "../types";
 import { useCallback } from "react";
+import { User, UsersApiData } from "../types";
 
 const useUsersApi = () => {
   const apiBaseUrl = import.meta.env.VITE_USER_SEARCH_API_URL;
@@ -8,7 +8,7 @@ const useUsersApi = () => {
   const getUsersByWordApi = useCallback(
     async (wordToSearch: string) => {
       try {
-        const response = await axios.get<ApiData>(
+        const response = await axios.get<UsersApiData>(
           `${apiBaseUrl}/search/users?q=${wordToSearch}`,
         );
         const users = response.data.items;
@@ -24,9 +24,7 @@ const useUsersApi = () => {
   const getUserByLoginApi = useCallback(
     async (login: string) => {
       try {
-        const response = await axios.get<ApiData>(
-          `${apiBaseUrl}/users/${login}`,
-        );
+        const response = await axios.get<User>(`${apiBaseUrl}/users/${login}`);
         const user = response.data;
 
         return user;
