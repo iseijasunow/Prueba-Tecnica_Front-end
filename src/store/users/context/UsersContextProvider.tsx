@@ -29,7 +29,7 @@ const UsersContextProvider = ({ children }: PropsWithChildren) => {
 
   const loadUsersFollowers = useCallback(async () => {
     const usersFollowersApi = await Promise.all(
-      users.map(async (user, index) => {
+      users.slice(0, 10).map(async (user, index) => {
         if (index < 10) {
           const userApi = await getUserByLoginApi(user.login);
 
