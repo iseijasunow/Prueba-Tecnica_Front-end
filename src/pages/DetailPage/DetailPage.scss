@@ -1,0 +1,38 @@
+@use "../../styles/variables";
+
+.user {
+  margin: 0 auto;
+  margin-top: 40px;
+  max-width: 800px;
+  text-align: left;
+
+  &__avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+
+  > div {
+    display: flex;
+    gap: 50px;
+
+    > div {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  &__name {
+    color: variables.$color_headings;
+  }
+
+  &__followers {
+    color: variables.$color_headings;
+  }
+}
+
+.back {
+  display: flex;
+}

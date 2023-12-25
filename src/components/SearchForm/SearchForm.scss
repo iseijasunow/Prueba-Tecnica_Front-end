@@ -1,0 +1,16 @@
+@use "../../styles/variables";
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+
+  &__input {
+    border-radius: 20px;
+    border: 1px solid variables.$color-secondary;
+    padding: 8px 12px;
+    color: variables.$color-headings;
+  }
+}
