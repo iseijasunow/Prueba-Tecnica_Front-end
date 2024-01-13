@@ -13,10 +13,6 @@ export default function Form() {
     setNameSearch(event.target.value);
   };
 
-  useEffect(() => {
-    console.log(nameSearch);
-  }, [nameSearch]);
-
   const handleSearch = (event) => {
     event.preventDefault();
 
@@ -35,6 +31,7 @@ export default function Form() {
 
   return (
     <>
+      <a>Enter a name and search any user on Github</a>
       <form onSubmit={handleSearch}>
         <input
           type="text"

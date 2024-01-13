@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import BackBtn from "../BackBtn/BackBtn";
+import BackBtn from "../../components/BackBtn/BackBtn";
 
 export default function UserPage() {
   const { userName } = useParams();
@@ -18,7 +18,7 @@ export default function UserPage() {
 
   useEffect(() => {
     getData();
-  }, userName);
+  }, [userName]);
 
   return (
     <div>

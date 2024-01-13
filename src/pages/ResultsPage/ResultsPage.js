@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
-import BackBtn from "../BackBtn/BackBtn";
+import { useParams } from "react-router-dom";
+import BackBtn from "../../components/BackBtn/BackBtn";
+import Form from "../../components/Form/Form";
+import SearchList from "../../components/SearchList/SearchList";
 
 export default function Results() {
   const { searchName } = useParams();
@@ -33,18 +35,8 @@ export default function Results() {
 
   return (
     <div>
-      <h1>Results for: {searchName}</h1>
-      <ul>
-        {user &&
-          user.map((item) => (
-            <li key={item.id}>
-              <Link to={`/users/${item.userName}`}>
-                <p>Name: {item.userName}</p>
-                <p>Id: {item.id}</p>
-              </Link>
-            </li>
-          ))}
-      </ul>
+      <Form />
+      <SearchList searchName={searchName} user={user}/>
       <BackBtn />
     </div>
   );

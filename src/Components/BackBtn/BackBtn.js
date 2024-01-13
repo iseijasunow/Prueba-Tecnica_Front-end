@@ -1,10 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function BackBtn() {
+  const navigate = useNavigate();
+
+  const goBack = () => {
+    navigate(-1);
+  };
+
   return (
     <div>
-      <Link to="/">Back Home</Link>
+      <button onClick={goBack}>Back</button>
     </div>
   );
 }
