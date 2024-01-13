@@ -4,5 +4,10 @@
    text-decoration: none;
    font-weight: bold;
    font-size: 32px;
-   color: $color-primary;
+   color: white;
+   transition: 0.25s;
+
+   &:hover{
+      opacity: 0.8;
+   }
 }

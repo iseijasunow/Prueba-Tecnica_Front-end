@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
-import "./Form.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./Form.scss";
 
 export default function Form() {
   const [nameSearch, setNameSearch] = useState("");
@@ -17,7 +17,7 @@ export default function Form() {
     event.preventDefault();
 
     if (nameSearch.length < 4) {
-      setAlertMessage("The search must have at least 4 characters long.");
+      setAlertMessage("The search must be at least 4 characters long.");
       return;
     }
 
@@ -27,11 +27,12 @@ export default function Form() {
     }
 
     navigate(`/results/${nameSearch}`);
+    setAlertMessage("");
   };
 
   return (
-    <>
-      <a>Enter a name and search any user on Github</a>
+    <div className="form">
+      <a>Find any user on Github</a>
       <form onSubmit={handleSearch}>
         <input
           type="text"
@@ -39,10 +40,10 @@ export default function Form() {
           onChange={updateName}
         ></input>
         <button type="button" onClick={handleSearch}>
-          <FontAwesomeIcon icon={faMagnifyingGlass} />
+          <FontAwesomeIcon icon={faMagnifyingGlass} className="icon"/>
         </button>
       </form>
-      <span>{alertMessage}</span>
-    </>
+      <span className="alert">{alertMessage}</span>
+    </div>
   );
 }

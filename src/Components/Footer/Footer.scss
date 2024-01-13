@@ -1,0 +1,13 @@
+.footer{
+   color: white;
+   a{
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.25s;
+
+      &:hover{
+         opacity: 0.7;
+      }
+   }
+}

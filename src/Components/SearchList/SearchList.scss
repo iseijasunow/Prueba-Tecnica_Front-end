@@ -1,0 +1,25 @@
+.results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h3 {
+    color: white;
+    text-align: center;
+  }
+}
+
+.list-parent {
+  list-style-type: none;
+  padding: 0;
+
+  * {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+li {
+  padding-bottom: 1rem;
+}

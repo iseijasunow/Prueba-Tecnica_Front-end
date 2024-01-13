@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import "./BackBtn.scss";
 
 export default function BackBtn() {
   const navigate = useNavigate();
@@ -8,9 +9,5 @@ export default function BackBtn() {
     navigate(-1);
   };
 
-  return (
-    <div>
-      <button onClick={goBack}>Back</button>
-    </div>
-  );
+  return <button onClick={goBack} className="back-btn">BACK</button>;
 }
