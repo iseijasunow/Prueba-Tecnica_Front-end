@@ -1,3 +1,5 @@
+@import "../../styles/styles.scss";
+
 .results {
   display: flex;
   flex-direction: column;
@@ -5,7 +7,7 @@
   justify-content: center;
 
   h3 {
-    color: white;
+    color: $color-text;
     text-align: center;
   }
 }
@@ -15,7 +17,7 @@
   padding: 0;
 
   * {
-    color: white;
+    color: $color-text;
     text-decoration: none;
   }
 }

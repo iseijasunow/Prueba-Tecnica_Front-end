@@ -1,29 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import { getUserFollowers } from "../../api/userApi";
+import FollowersChart from "../FollowersChart/CircularChart";
 import "./UserListItem.scss";
-import FollowersChart from "../FollowersChart/FollowersChart";
 
-export default function UserListItem({ id, userName }) {
-  const [userFollowers, setUserFollowers] = useState();
-
-  useEffect(() => {
-    getUserFollowers(userName, setUserFollowers);
-  }, [userName]);
-
+export default function UserListItem({ id, userName, followers }) {
   return (
     <Link to={`/users/${userName}`}>
       <div className="list-item">
         <span className="username">@{userName}</span>
         <span className="id">Id: {id}</span>
-        {userFollowers ? (
-          <span>
-            <FollowersChart followersCount={userFollowers.length} />
-            Followers
-          </span>
-        ) : (
-          ""
-        )}
+        <span>
+          <FollowersChart followersCount={followers} />
+          Followers
+        </span>
       </div>
     </Link>
   );

@@ -8,15 +8,9 @@ import { getUserData, getUserFollowers, getUserRepos } from "../../api/userApi";
 export default function UserPage() {
   const { userName } = useParams();
   const [users, setUsers] = useState();
-  const [userFollowers, setUserFollowers] = useState();
-  const [userRepos, setUserRepos] = useState();
-
-
 
   useEffect(() => {
     getUserData(userName, setUsers);
-    getUserFollowers(userName, setUserFollowers);
-    getUserRepos(userName, setUserRepos);
   }, [userName]);
 
   return (
@@ -33,12 +27,12 @@ export default function UserPage() {
           <section className="user-data">
             <p>@{users.login}</p>
             {
-              userFollowers ? 
-              <a><b>{userFollowers.length}</b> Followers</a> : ""
+              users.followers ? 
+              <a><b>{users.followers}</b> {users.followers == 1 ? "Follower" : "Followers"}</a> : ""
             }
             {
-              userRepos ? 
-              <a><b>{userRepos.length}</b> Repos</a> : ""
+              users.public_repos ? 
+              <a><b>{users.public_repos}</b> {users.public_repos == 1 ? "Repo" : "Repos"}</a> : ""
             }
             <a href={users.html_url} target="_blank" className="link">
               Github profile

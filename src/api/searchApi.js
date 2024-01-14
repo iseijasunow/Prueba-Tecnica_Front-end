@@ -2,29 +2,32 @@ import ErrorCard from "../components/ErrorCard/ErrorCard";
 
 const searchData = async (searchName, setUsers) => {
   try {
-    fetch(`https://api.github.com/search/users?q=${searchName}&per_page=10`)
-      .then((response) => response.json())
-      .then((json) => {
-        setUsers([]);
-        if (json.items && Array.isArray(json.items)) {
-          json.items.map((item) => {
-            setUsers((users) => [
-              ...users,
-              {
-                id: item.id,
-                userName: item.login,
-                image: item.avatar_url,
-                followers: item.followers_url,
-                profileUrl: item.url,
-              },
-            ]);
-          });
-        }
+    const response = await fetch(`https://api.github.com/search/users?q=${searchName}&per_page=10`);
+    const data = await response.json();
+
+    setUsers([]);
+
+    if (data.items && Array.isArray(data.items)) {
+      data.items.forEach(async (item) => {
+        const userResponse = await fetch(`https://api.github.com/users/${item.login}`);
+        const userData = await userResponse.json();
+
+        setUsers((users) => [
+          ...users,
+          {
+            id: userData.id,
+            userName: userData.login,
+            image: userData.avatar_url,
+            followers: userData.followers,
+            profileUrl: userData.html_url,
+          },
+        ]);
       });
+    }
   } catch (error) {
     console.log("Error fetching user data:", error);
-    ErrorCard(error);
   }
 };
+
 
 export {searchData};

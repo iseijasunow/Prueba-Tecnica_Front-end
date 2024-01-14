@@ -31,6 +31,7 @@ export default function SearchList({ searchName, user, userFollowers }) {
                       key={item.id}
                       id={item.id}
                       userName={item.userName}
+                      followers={item.followers}
                     />
                   </li>
                 ))}

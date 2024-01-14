@@ -1,10 +1,9 @@
-@use '../../styles/variables';
+@import "../../styles/styles.scss";
 
 .menu-item{
    text-decoration: none;
    font-weight: bold;
-   font-size: 32px;
-   color: white;
+   color: $color-text;
    transition: 0.25s;
 
    &:hover{

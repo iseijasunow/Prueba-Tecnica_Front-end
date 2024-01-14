@@ -1,6 +1,25 @@
-@use "./variables";
-
 body {
-  // background-color: $color-primary;
-  // font-family: $font-primary;
+  background-color: $color-primary;
+  font-family: $font-primary;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: $color-text;
+}
+
+h1{
+  font-size: calc(30px + 0.4rem);
+}
+
+p, span{
+  font-size: calc(10px + 0.4rem);
+}
+
+button{
+  font-size: 14px;
 }

@@ -5,7 +5,7 @@ import "./FollowersChart.scss";
 
 const FollowersChart = ({ followersCount }) => {
   const calculatePercentage = (count) => {
-    return (count / 30) * 100;
+    return (count / 100) * 100;
   };
 
   const fillPercentage = calculatePercentage(followersCount);

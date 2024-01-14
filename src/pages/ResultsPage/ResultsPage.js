@@ -6,6 +6,7 @@ import Form from "../../components/Form/Form";
 import SearchList from "../../components/SearchList/SearchList";
 import { searchData } from "../../api/searchApi";
 import "./ResultsPage.scss";
+import FollowersChart from "../../components/FollowersChart/CircularChart";
 
 export default function Results() {
   const { searchName } = useParams();
@@ -25,7 +26,7 @@ export default function Results() {
     >
       <div className="results-page">
         <Form />
-        <SearchList searchName={searchName} user={user} />
+        <SearchList searchName={searchName} user={user} userFollowers={userFollowers}/>
         <BackBtn />
       </div>
     </motion.div>

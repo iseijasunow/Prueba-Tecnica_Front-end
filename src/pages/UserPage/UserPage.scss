@@ -1,3 +1,5 @@
+@import "../../styles/styles.scss";
+
 .user-page{
    max-width: 1080px;
    width: 50vw;
@@ -9,21 +11,21 @@
 }
 
 .user-card{
-   padding: 1rem;
-   background-color: #0A0A0A;
-   box-shadow: 0 0 4px rgb(50, 50, 50);
    display: flex;
    flex-direction: column;
    align-items: center;
    justify-content: center;
    text-align: center;
    border-radius: 50px;
+   background-color: #0A0A0A;
+   box-shadow: 0 0 4px $color-shadow;
    gap: 1rem;
+   padding: 1rem;
    margin-bottom: 2rem;
    transition: 0.5s;
 
    &:hover{
-      box-shadow: 0 0 30px rgb(50, 50, 50);
+      box-shadow: 0 0 30px $color-shadow;
    }
    
    img{
@@ -37,20 +39,18 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      color: white;
+      color: $color-text;
       gap: 4px;
 
       *{
-         margin: 0;
          padding: 0;
       }
 
       .link{
          padding-top: 12px;
-         color: white;
+         color: $color-text;
          text-decoration: none;
          font-weight: bolder;
-         font-size: 18px;
          transition: 0.25s;
 
          &:hover{

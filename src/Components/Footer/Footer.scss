@@ -1,7 +1,9 @@
+@import "../../styles/styles.scss";
+
 .footer{
-   color: white;
+   color: $color-text;
    a{
-      color: white;
+      color: $color-text;
       text-decoration: none;
       font-weight: bold;
       transition: 0.25s;
