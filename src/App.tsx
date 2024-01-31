@@ -1,12 +1,22 @@
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import './App.scss'
+import Home from './Pages/Home/Home'
+import User from './Pages/User/User'
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Home />
+  },
+  {
+    path: '/user',
+    element: <User />
+  }
+])
 
 function App() {
-
   return (
-    <>
-      <h1>Prueba Técnica de Unow</h1>
-      <h2>Por Adrián García</h2>
-    </>
+    <RouterProvider router={router} />
   )
 }
 
