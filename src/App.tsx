@@ -1,3 +1,4 @@
+import { Toaster } from 'react-hot-toast'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import './App.scss'
 import Home from './Pages/Home/Home'
@@ -16,7 +17,11 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <RouterProvider router={router} />
+    <>
+      <Toaster />
+      <RouterProvider router={router} />
+    </>
+    
   )
 }
 
