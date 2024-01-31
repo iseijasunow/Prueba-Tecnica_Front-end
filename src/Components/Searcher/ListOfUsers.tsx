@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import { User } from "../../Pages/User/UserInterface";
+import { UserList } from "../../types";
 
-type Props = { users: User[] | undefined, loading: boolean }
+type Props = { users: UserList[] | undefined, loading: boolean }
 function ListOfUsers({ users, loading }: Props) {
     return (
         <div>

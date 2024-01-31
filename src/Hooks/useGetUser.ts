@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { User } from "../Pages/User/UserInterface";
 import { getUserService } from "../Services/getUserService";
+import { UserDetail } from "../types";
 
 export function useGetUser () {
-    const [user, setUser] = useState<User>()
+    const [user, setUser] = useState<UserDetail>()
 
     const getUser = async (query: string) => {
         getUserService(query).then(user => setUser(user))

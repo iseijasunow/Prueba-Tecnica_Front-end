@@ -1,8 +1,8 @@
-import { User } from "../Pages/User/UserInterface"
+import { UserDetail } from "../types"
 
 const ENDPOINT = 'https://api.github.com/users'
 
-export const getUserService = async (login: string): Promise<User> => {
+export const getUserService = async (login: string): Promise<UserDetail> => {
 
     const response = await fetch(`${ENDPOINT}/${login}`)
     const data = await response.json()
@@ -12,5 +12,6 @@ export const getUserService = async (login: string): Promise<User> => {
         id: data.id,
         avatar_url: data.avatar_url,
         blog: data.blog,
+        followers: data.followers,
     }
 }

@@ -1,10 +1,10 @@
 import { useState } from "react";
 import toast from "react-hot-toast";
-import { User } from "../Pages/User/UserInterface";
 import { searchUsersService } from "../Services/SearchUsersService";
+import { UserList } from "../types";
 
 export function useSearchUsers () {
-    const [users, setUsers] = useState<User[]>()
+    const [users, setUsers] = useState<UserList[]>()
 
     const queryIsValid = (query:string): boolean => {
         if(query === 'iseijasunow'){
