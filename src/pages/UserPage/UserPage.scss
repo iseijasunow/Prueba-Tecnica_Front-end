@@ -1,0 +1,61 @@
+@import "../../styles/styles.scss";
+
+.user-page{
+   max-width: 1080px;
+   width: 50vw;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   height: 100%;
+}
+
+.user-card{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   border-radius: 50px;
+   background-color: #0A0A0A;
+   box-shadow: 0 0 4px $color-shadow;
+   gap: 1rem;
+   padding: 1rem;
+   margin-bottom: 2rem;
+   transition: 0.5s;
+
+   &:hover{
+      box-shadow: 0 0 30px $color-shadow;
+   }
+   
+   img{
+      width: 33vw;
+      max-width: 300px;
+      border-radius: 35px;
+   }
+
+   .user-data{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: $color-text;
+      gap: 4px;
+
+      *{
+         padding: 0;
+      }
+
+      .link{
+         padding-top: 12px;
+         color: $color-text;
+         text-decoration: none;
+         font-weight: bolder;
+         transition: 0.25s;
+
+         &:hover{
+            transform: scale(1.1);
+         }
+      }
+   }
+}

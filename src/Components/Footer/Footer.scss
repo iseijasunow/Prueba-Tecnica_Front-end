@@ -1,0 +1,15 @@
+@import "../../styles/styles.scss";
+
+.footer{
+   color: $color-text;
+   a{
+      color: $color-text;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.25s;
+
+      &:hover{
+         opacity: 0.7;
+      }
+   }
+}

@@ -1,0 +1,27 @@
+@import "../../styles/styles.scss";
+
+.results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h3 {
+    color: $color-text;
+    text-align: center;
+  }
+}
+
+.list-parent {
+  list-style-type: none;
+  padding: 0;
+
+  * {
+    color: $color-text;
+    text-decoration: none;
+  }
+}
+
+li {
+  padding-bottom: 1rem;
+}

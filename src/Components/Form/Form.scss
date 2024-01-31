@@ -1,0 +1,92 @@
+@import "../../styles/styles.scss";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50vw;
+  max-width: 400px;
+  
+  a {
+    color: $color-text;
+    padding-bottom: 12px;
+    font-weight: bold;
+  }
+
+  form {
+    width: 100%;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    display: inline;
+
+    input {
+      font-size: 18px;
+      width: calc(100% - 48px);
+      height: 48px;
+      border-radius: 25px 0 0 25px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      border: 1px solid #b5b5b5;
+      border-right: none;
+      box-shadow: 0 0 4px $color-shadow;
+
+      &:hover{
+        box-shadow: 0 0 40px $color-shadow;
+     }
+
+      margin: 0;
+      padding: 0;
+      padding-left: 16px;
+
+      transition: 0.25s;
+
+      outline: none;
+    }
+
+    button {
+      font-size: 18px;
+      width: 48px;
+      height: 48px;
+      border-radius: 0 25px 25px 0;
+      border: 1px solid $color-border;
+
+      background-color: $color-border;
+
+      margin: 0;
+      padding: 0;
+
+      transition: 0.25s;
+
+      &:hover {
+        cursor: pointer;
+        background-color: $color-border-2;
+        border: 1px solid $color-border-2;
+      }
+
+      &:hover .icon {
+        transform: scale(1.15);
+      }
+
+      .icon {
+        width: 24px;
+        transition: 0.25s;
+        color: $color-text;
+        padding-right: 4px;
+      }
+    }
+  }
+
+  .alert {
+    margin-top: 5%;
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+    height: 10px;
+    max-height: 24px;
+    color: $color-text;
+    font-style: italic;
+  }
+}

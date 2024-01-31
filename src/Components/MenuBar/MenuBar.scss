@@ -1,0 +1,12 @@
+@import "../../styles/styles.scss";
+
+.menu-item{
+   text-decoration: none;
+   font-weight: bold;
+   color: $color-text;
+   transition: 0.25s;
+
+   &:hover{
+      opacity: 0.8;
+   }
+}
