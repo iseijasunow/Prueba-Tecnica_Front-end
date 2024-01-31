@@ -6,7 +6,7 @@ export function useGetUsersFollowers () {
 
     const getFollowers = async (usernames: string[]) => {
         setFollowers([])
-        
+
         const newFollowers = await Promise.all(
             usernames.map(async (username) => {
                 const user = await getUserService(username);
@@ -14,7 +14,7 @@ export function useGetUsersFollowers () {
             })
         );
 
-        setFollowers((prevFollowers) => [...(prevFollowers || []), ...newFollowers]);
+        setFollowers(newFollowers);
     };
 
     return { followers, getFollowers }
