@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { User } from "../../Pages/User/UserInterface";
 
 type Props = { users: User[] | undefined, loading: boolean }
@@ -9,7 +10,7 @@ function ListOfUsers({ users, loading }: Props) {
                 {users && users.length > 0 && !loading && (
                     users.map((user) => (
                         <div key={user.id}>
-                            <a href={`/user/${user.login}`}>{user.id} - {user.login}</a>
+                            <Link to={`/user/${user.login}`}>{user.id} - {user.login}</Link>
                         </div>
                     ))
                 )}

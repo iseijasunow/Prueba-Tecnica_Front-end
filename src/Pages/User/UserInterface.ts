@@ -1,4 +1,6 @@
 export interface User {
     id: string,
-    login: string
+    login: string,
+    avatar_url: string,
+    blog: string,
 }
