@@ -8,6 +8,5 @@ export interface UserDetail {
 
 export interface UserList {
     id: string,
-    login: string,
-    followers: number,
+    login: string
 }

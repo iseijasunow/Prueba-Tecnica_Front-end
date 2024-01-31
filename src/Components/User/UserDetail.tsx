@@ -16,7 +16,8 @@ function UserDetail({login}: {login:string}) {
             {user ? <>
                 <img src={user.avatar_url} alt={user.login} />
                 <h1>{user.login}</h1>
-                Web: {user.blog ? <a href={user.blog}> {user.blog}</a> : 'No tiene web'}
+                <span>Web: {user.blog ? <a href={user.blog}> {user.blog}</a> : 'No tiene web'}</span>
+                <span>Followers: {user.followers ?? 0}</span>
             </>
                 : 'No se encuentra ningun usuario'}
         </>

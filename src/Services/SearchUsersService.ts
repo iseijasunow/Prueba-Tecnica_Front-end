@@ -9,9 +9,9 @@ export const searchUsersService = async (query: string): Promise<UserList[]> => 
     const response = await fetch(`${ENDPOINT}?q=${query}&per_page=${RESULTS_PER_PAGE}`)
     const data = await response.json()
 
+    console.log(data.items)
     return data.items?.map((user: UserList) => ({
         login: user.login,
-        id: user.id,
-        followers: user.followers,
+        id: user.id
     }))
 }
