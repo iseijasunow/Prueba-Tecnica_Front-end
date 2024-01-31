@@ -1,3 +1,5 @@
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from "react";
 import { useSearchUsers } from "../../Hooks/useSearchUsers";
 import ListOfUsers from "./ListOfUsers";
@@ -33,7 +35,7 @@ function Searcher() {
                 onChange={(e) => setSearchText(e.target.value)}
                 onKeyDown={handleKeyDown}
             />
-            <button onClick={searchAction}>Search</button>
+            <button onClick={searchAction}><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
 
             <ListOfUsers users={users} loading={loading} />
         </div>
