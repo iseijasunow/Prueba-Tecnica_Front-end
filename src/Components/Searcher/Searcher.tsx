@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from "react";
 import { useSearchUsers } from "../../Hooks/useSearchUsers";
 import ListOfUsers from "./ListOfUsers";
+import './Searcher.scss';
 
 function Searcher() {
 
@@ -27,16 +28,18 @@ function Searcher() {
 
     return (
         <div>
-            <input
-                type="text"
-                name="search"
-                id="search"
-                value={searchText}
-                onChange={(e) => setSearchText(e.target.value)}
-                onKeyDown={handleKeyDown}
-            />
-            <button onClick={searchAction}><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
-
+            <p>Ingresa el nombre de usuario de GitHub y encuentra perfiles interesantes.</p>
+            <div className="searchBar">
+                <input
+                    type="text"
+                    name="search"
+                    id="search"
+                    value={searchText}
+                    onChange={(e) => setSearchText(e.target.value)}
+                    onKeyDown={handleKeyDown}
+                />
+                <button onClick={searchAction}><FontAwesomeIcon icon={faMagnifyingGlass} /></button>
+            </div>
             <ListOfUsers users={users} loading={loading} />
         </div>
     )
