@@ -4,12 +4,16 @@ import Searcher from "../../Components/Searcher/Searcher";
 
 function Home() {
     return (
-        <div>
-            <h1>Prueba técnica de Unow <FontAwesomeIcon icon={faGithub} /></h1>
-            <h2>Por Adrián García</h2>
+        <>
+            <header>
+                <h1>Prueba técnica de Unow <FontAwesomeIcon icon={faGithub} /></h1>
+                <h2>Por Adrián García</h2>
+            </header>
+            <main>
+                <Searcher />
+            </main>
             
-            <Searcher />
-        </div>
+        </>
     )
 }
 
