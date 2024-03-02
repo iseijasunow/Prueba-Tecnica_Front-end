@@ -13,7 +13,6 @@ import useFetchFollowers from "@/app/hooks/useFetchFollowers";
 
 const Bars = ({ users }) => {
   const { data, loading, error } = useFetchFollowers(users);
-  console.log(data);
   ChartJS.register(
     CategoryScale,
     LinearScale,
@@ -23,7 +22,6 @@ const Bars = ({ users }) => {
     Legend
   );
   const names = users.map((user) => user.login);
-  console.log(names);
   const options = {
     responsive: true,
     maintainAspectRatio: false,
@@ -33,7 +31,6 @@ const Bars = ({ users }) => {
       },
     },
   };
-  console.log(data);
   const dataFinal = {
     labels: names,
     datasets: [
