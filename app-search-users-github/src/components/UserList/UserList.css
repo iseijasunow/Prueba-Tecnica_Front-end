@@ -1,0 +1,15 @@
+.user-list-container {
+  grid-template-columns: 250px 1fr 1fr; 
+}
+
+.user-list {
+  grid-column: 2; 
+  padding: 10px;
+  border-right: 1px solid #ccc; /* Añadir un borde derecho */
+  overflow-y: auto;
+}
+
+.user-details-container {
+  grid-column: 3;
+  padding: 20px;
+}

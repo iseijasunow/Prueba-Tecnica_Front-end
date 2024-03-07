@@ -1,6 +1,7 @@
 import React,{ useState } from 'react';
 import { getUserDetails } from '../../services/githubService';
 import UserDetails from '../../components/UserDetails/UserDetails';
+import './UserList.css';
 
 function UserList({ users }) {
     
@@ -17,14 +18,14 @@ function UserList({ users }) {
   
   return (
     <>
-        <div>
+        <div className="user-list-container">
             {users.map((user) => (
-                <div key={user.id} onClick={() => handleUserClick(user.login)}>
+                <div className="user-list"  key={user.id} onClick={() => handleUserClick(user.login)}>
                 {user.id} {user.login}
                 </div>
             ))}
         </div>
-        <div>
+        <div className="user-details-container">
              {selectedUser && <UserDetails selectedUser={selectedUser} />}
         </div>
     </>

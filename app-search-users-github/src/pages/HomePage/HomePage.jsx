@@ -83,8 +83,8 @@ function HomePage() {
 
 
   return (
-    <div>
-      <h1>Buscador de Usuario Github</h1>
+    <div className="container">
+  
       <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} handleSearch={handleSearch} />
       {error && <ErrorComponent message={error} />}
       <UserList users={users} />
