@@ -1,68 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
+
+@font-face {
+    font-family: 'century-gothic-bold';
+    src:
+         url('fuentes/CenturyGothicBold.woff') format('woff'), /* Modern Browsers */
+         url('fuentes/CenturyGothicBold.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('fuentes/CenturyGothicBold.svg#svgFontName') format('svg'); /* Legacy iOS */
+  }
+
+/*
+:root{
+    --gris: #DCDCDC;
+    --claro: #F8F8F8;
+    --azul: #86B5E3;
+    --azul2: #86b4e34b;
+    --azul3: #86b4e379;
+    --oscuro: #252024;
+    --oscuro2: #2520246b;
+    --amarillo: #F7C623;
+}
+*/
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+    --grey: #949494;
+    --s-grey: #D4D4D4;
+    --black: #000000;
+    --white: #FFFFFF;
+    
+    --yellow: #F7C623;
+    --s-yellow: #9e801b;
+}
+/* Para navegadores que admiten el modelo de scroll personalizado de CSS */
+/* Establece el ancho del scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 10px;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+/* Establece el color del scrollbar */
+::-webkit-scrollbar-thumb {
+  background-color: var(--s-grey);
+  border-radius: 10px;
 }
 
-body {
-  margin: 0;
+/* Establece el color de fondo del scrollbar */
+::-webkit-scrollbar-track {
+  background-color: var(--black);
+}
+
+
+*{
+    font-family: 'century gothic';
+    color: var(--s-grey) !important;
+    
+    scrollbar-width: thin;
+    scrollbar-color: var(--s-grey) var(--black);
+}
+body{
+    min-height: 100vh;
+    margin: 0;
+    /*overflow: hidden;*/
+    background: var(--black);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+}
+
+
+#root{
+  height: 100%;
+  width: 100;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.section-basic{
+  height: 700px;
+  box-shadow: 1px 1px 20px 0px var(--white);
+  border-radius: 10px;
+  margin: 30px;
+}
+.section-chart{
+  width: 1300px;
+  display: flex;
+  align-items: center;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.section-us-list{
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-us-results{
+  width: 360px !important;
+  height: 100%;
+  margin-bottom: 20px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.us-card{
+  height: 80px !important;  
+  width: 349px !important;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1.2rem;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  color: var(--white)
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.us-card-focus{
+  background-color: var(--white) !important;
+  box-shadow: inset 0 0 10px 7px var(--grey) !important;
 }
+.us-card-focus span,
+.us-card-focus strong{
+  color: var(--black) !important;
+}
+
+.us-card:hover{
+  /* borde interno simetrico 
+  ver en: https://www.desarrollolibre.net/blog/css/truco-para-los-bordes-en-css-bordes-internos*/
+  box-shadow: inset 0 0 0 1px var(--white);
+}
+
+
+.us-card > div{
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+}
+.us-card span{
+  font-size: .8rem;
+}
+
+.us-card-avatar{
+  width: 48px;
+  height: 48px;
+  border-radius: 1000px;
+}
+
+.us-search-card{
+  width: 360px;
+  height: 100px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.searcher-input input{
+  height: 35px;
+  width: 240px;
+  padding: 0 10px 0 10px;
+  outline: none;
+  border-radius: 3px;
+  border: none;
+  border-bottom: solid 1.5px var(--black);
+  background-color: var(--white);
+  box-shadow: inset 0 0 10px 7px var(--grey);
+  color: var(--black) !important;
+}
+.searcher-input button{
+  height: 35px;
+  width: 70px;
+  /*margin: 25px 25% 35px 25%;*/
+  border-radius: 3px;
+  border: none;
+  /*border-bottom: solid 1.5px var(--black);*/
+  box-shadow: inset 0 0 10px 7px var(--grey);
+  background-color: var(--white);
+  color: var(--black) !important; 
+}
+
+.searcher-input button:hover{
+  color: var(--black);
+  background: var(--yellow);
+  box-shadow: inset 0 0 10px 7px var(--s-yellow);
+}
+
+
+/*.us-card:focus strong, span{
+  font-weight: bold;
+  color: var(--black) !important;
+}/*
+.us-card:focus{
+  font-weight: bold;
+  background-color: var(--white);
+  box-shadow: inset 0 0 10px 7px var(--grey);
+}*/
