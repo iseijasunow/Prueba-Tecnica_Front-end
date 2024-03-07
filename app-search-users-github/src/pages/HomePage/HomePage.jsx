@@ -6,6 +6,7 @@ import { getUsers } from '../../services/githubService';
 function HomePage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [users, setUsers] = useState([]);
+  
 
   const handleSearch = async () => {
     try {
