@@ -3,6 +3,7 @@ import Chart from 'chart.js/auto';
 
 import SearchBar from '../../components/SearchBar/SearchBar';
 import UserList from '../../components/UserList/UserList';
+import ErrorComponent from '../../components/ErrorComponent/ErrorComponent';
 import { getUsers } from '../../services/githubService';
 import axios from 'axios';
 
@@ -36,8 +37,8 @@ function HomePage() {
         const response = await getUsers(searchTerm);
         const userData = response.data.items.slice(0, 10);
         const usersWithFollowers = await Promise.all(userData.map(async (user) => {
-          const userDetails = await axios.get(user.url); // Obtener detalles del usuario
-          return { ...user, followers: userDetails.data.followers }; // Agregar el total de seguidores al objeto del usuario
+          const userDetails = await axios.get(user.url); 
+          return { ...user, followers: userDetails.data.followers };
         }));
         setUsers(usersWithFollowers);
       } catch (error) {
@@ -85,7 +86,7 @@ function HomePage() {
     <div>
       <h1>Buscador de Usuario Github</h1>
       <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} handleSearch={handleSearch} />
-      {error && <div style={{ color: 'red' }}>{error}</div>}
+      {error && <ErrorComponent message={error} />}
       <UserList users={users} />
       <div>
         {<canvas id="followersChart" width="400" height="200"></canvas>}
