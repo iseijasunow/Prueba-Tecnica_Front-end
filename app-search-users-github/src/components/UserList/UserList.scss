@@ -1,9 +1,9 @@
 
 .user-list {
-  grid-column: 2; 
-  padding: 10px;
-  border-right: 1px solid #ccc; /* Añadir un borde derecho */
   overflow-y: auto;
+  padding-top: 5px;
+  border-right: 1px solid #ccc;
+  padding-left: 20px;
 }
 
 .user-details-container {
