@@ -9,9 +9,12 @@ const HomePage = () => {
 
   return (
     <div className="container">
+      <div className="">
       <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} handleSearch={handleSearch} />
       {error && <ErrorComponent message={error} />}
       <UserList users={users} />
+      </div>
+    
       <div>
         {<canvas id="followersChart" width="400" height="200"></canvas>}
       </div>

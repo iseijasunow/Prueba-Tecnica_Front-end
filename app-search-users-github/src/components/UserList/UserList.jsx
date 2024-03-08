@@ -20,11 +20,11 @@ function UserList({ users }) {
   
   return (
     <>
-        <div className="user-list-container">
+        <div>
             {users.map((user) => (
                 <div className="user-list"  key={user.id} onClick={() => handleUserClick(user.login)}>
-                <FontAwesomeIcon icon={faEye} />
-                  {user.id} {user.login}
+              
+                 <a>  <FontAwesomeIcon icon={faEye} />{user.id} {user.login}</a> 
                 </div>
             ))}
         </div>
