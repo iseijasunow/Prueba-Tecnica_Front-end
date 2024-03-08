@@ -24,5 +24,26 @@
   }
 
   .bio {
-    width: 400px; 
+    width: 300px; 
+  }
+
+
+@media screen and (max-width: 768px) {
+    .user-details-container {
+      border-right: none;
+    }
+    
+    .user-details-container h2 {
+      font-size: 20px; 
+    }
+    
+    .user-details-container img {
+      width: 100px; 
+      height: 100px;
+      margin-bottom: 5px;
+    }
+    
+    .bio {
+      width: auto;
+    }
   }

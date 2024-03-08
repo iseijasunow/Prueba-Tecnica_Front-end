@@ -33,7 +33,9 @@ h1 {
 }
 
 .container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px; 
 }
 
 .input-container {
@@ -60,4 +62,20 @@ h1 {
 .search-container {
   grid-column: 1;
   padding: 20px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+    gap: 10px; 
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
+    gap: 5px; 
+  }
 }

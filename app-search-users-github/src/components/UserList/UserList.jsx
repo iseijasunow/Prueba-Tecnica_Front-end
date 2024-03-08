@@ -1,6 +1,8 @@
 import React,{ useState } from 'react';
 import { getUserDetails } from '../../services/githubService';
 import UserDetails from '../../components/UserDetails/UserDetails';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEye } from '@fortawesome/free-solid-svg-icons';
 import './UserList.css';
 
 function UserList({ users }) {
@@ -21,7 +23,8 @@ function UserList({ users }) {
         <div className="user-list-container">
             {users.map((user) => (
                 <div className="user-list"  key={user.id} onClick={() => handleUserClick(user.login)}>
-                {user.id} {user.login}
+                <FontAwesomeIcon icon={faEye} />
+                  {user.id} {user.login}
                 </div>
             ))}
         </div>
