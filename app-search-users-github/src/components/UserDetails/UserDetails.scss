@@ -1,0 +1,49 @@
+.user-details-container {
+    padding: 2px;
+    border-right: 1px solid #ccc;
+  }
+  
+  .user-details-container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .user-details-container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .user-details-container p {
+    margin-bottom: 5px;
+  }
+  
+  .user-stats {
+    margin-top: 20px;
+  }
+
+  .bio {
+    width: 300px; 
+  }
+
+
+@media screen and (max-width: 768px) {
+    .user-details-container {
+      border-right: none;
+    }
+    
+    .user-details-container h2 {
+      font-size: 20px; 
+    }
+    
+    .user-details-container img {
+      width: 100px; 
+      height: 100px;
+      margin-bottom: 5px;
+    }
+    
+    .bio {
+      width: auto;
+    }
+  }
