@@ -1,5 +1,5 @@
 import React from 'react';
-import './UserDetails.css';
+import './UserDetails.scss';
 
 function UserDetails({ selectedUser }) {
   return (

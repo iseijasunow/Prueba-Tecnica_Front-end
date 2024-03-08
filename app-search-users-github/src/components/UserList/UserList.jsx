@@ -3,7 +3,7 @@ import { getUserDetails } from '../../services/githubService';
 import UserDetails from '../../components/UserDetails/UserDetails';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye } from '@fortawesome/free-solid-svg-icons';
-import './UserList.css';
+import './UserList.scss';
 
 function UserList({ users }) {
     
