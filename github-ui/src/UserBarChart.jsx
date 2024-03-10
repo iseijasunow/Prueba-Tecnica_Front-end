@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react'
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -7,8 +7,9 @@ import {
   Title,
   Tooltip,
   Legend,
-} from 'chart.js';
-import { Bar } from 'react-chartjs-2';
+} from 'chart.js'
+import { Bar } from 'react-chartjs-2'
+import {GitHub} from './services/GitHubService/GitHub.jsx'
 
 ChartJS.register(
   CategoryScale,
@@ -17,42 +18,58 @@ ChartJS.register(
   Title,
   Tooltip,
   Legend
-);
+)
 
-const options = {
-  responsive: true,
-  plugins: {
-    legend: {
-      position: 'top',
-    },
-    title: {
-      display: true,
-      text: 'Chart.js Bar Chart',
-    },
-  },
-};
+export function UserBarChart({users}) {
 
-const labels = ['user1', 'user2', 'user3', 'user4', 'user5', 'user6', 'user7'];
-const datalabels = [234, 533, 54, 677, 200, 425, 54]
- 
+  const [followers, setFollowers] = useState([])
+    
+  useEffect(() => {
+    const fetchFollowers = async () => {
+      setFollowers([])
+      try {
+        const followerCounts = await Promise.all(
+          users.map(async (user) => {
+            const github = new GitHub()
+            const followers = await github.numberOfFollowers(user.login)
+            return followers
+          })
+        );
+        setFollowers(followerCounts)
+      } catch (error) {
+        console.error('Error fetching followers:', error)
+      }
+    };
 
-const data = {
-  labels,
-  datasets: [
-    {
-      label: 'Dataset 1',
-      data: datalabels,
-      backgroundColor: 'rgba(225, 225, 225, 0)',
-      borderColor: 'rgba(225, 225, 225, 1)',
-      borderWidth: 1
-    },
-  ],
-};
+    fetchFollowers()
+  }, [users])
 
-export function UserBarChart() {
+  const labels = users.map(user => user.login)
+  const datalabels = followers
+
+  const options = {
+    responsive: true
+  }
+  
+  const data = {
+    labels,
+    datasets: [
+      {
+        label: 'Followers',
+        data: datalabels,
+        backgroundColor: 'rgba(233, 187, 36, 1)',
+        /*borderColor: 'rgba(225, 225, 225, 1)',*/
+        borderWidth: 1
+      },
+    ],
+  }
+  
   return (
       <div className='section-basic section-chart'>
+        <h1>Followers Per User</h1>
+        <div>
           <Bar options={options} data={data} />
+        </div>
       </div>
     )
 }
