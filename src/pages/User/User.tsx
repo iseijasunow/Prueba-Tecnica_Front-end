@@ -18,14 +18,15 @@ function User() {
 		}
 	}, [username, fetchUserData])
 
-	if (loading) return <p>Cargando...</p>
-	if (!user) return <p>No se encontró el usuario</p>
-
 	return (
 		<Layout>
-			<section className="container userDetails">
-				<UserDetails user={user} />
-			</section>
+			{
+				loading ? <p className='container'>Cargando...</p> : 
+				!user ? <p className='container'>No se encontró el usuario</p> : 
+				<section className="container userDetails">
+					<UserDetails user={user} />
+				</section>
+			}
 		</Layout>
 	)
 }
