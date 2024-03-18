@@ -1,0 +1,54 @@
+.users {
+	display: grid;
+	grid-template-columns: min(100%, 400px) min(100%, 800px);
+	place-content: center;
+	gap: 1rem;
+	padding: 1rem;
+
+	&__list {
+		margin: 0;
+		padding: 0;
+
+		li {
+			display: flex;
+			align-items: center;
+			gap: 1rem;
+			padding: 0 1rem;
+			list-style: none;
+
+			p,
+			a {
+				display: flex;
+				align-items: center;
+				gap: 0.5rem;
+			}
+		}
+
+		li:nth-child(odd) {
+			background-color: #1a1a1a;
+		}
+
+		li:nth-child(even) {
+			background-color: #2a2a2a;
+		}
+	}
+
+	&__barChart {
+		width: 100%;
+		max-width: 800px;
+	}
+
+	@media (max-width: 1024px) {
+		grid-template-columns: 1fr;
+		padding: 1rem;
+
+		&__barChart {
+			width: 100%;
+			margin-top: 2rem;
+
+			canvas {
+				width: 100%;
+			}
+		}
+	}
+}
